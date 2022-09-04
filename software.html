@@ -1,0 +1,161 @@
+<html>
+    <head>
+        <title>统优-软件</title>
+        <meta charset="UTF-8" >
+        <!--载入BootStrap的css-->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="img/icon.png">
+        <link href="css/navi.css" rel="stylesheet">
+        <!--css-->
+        <style type="text/css">
+            /*总*/
+            html,body{
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                overflow-y: auto; /*主页隐藏*/
+                overflow-x: auto;
+                text-align: center;
+            }
+            @font-face{
+                font-family: "navFont";
+                src: url("fonts/msyhl.ttc");
+                font-family: "navFontActive";
+                src: url("fonts/msyhbd.ttc");
+            }
+            .top{
+                position: relative;
+                top: 70px;
+                width: 100%;
+            }
+            .container{
+                color: #2A82E4;
+                font-size: 30px;
+                font-family: "navFont";
+                position: relative;
+                top: 100px;
+            }
+            .row{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                border: 2px solid #2A82E4;
+                bottom: 10px;
+                font-family: "navFontActive";
+                color: black;
+                padding-top: 20px;
+                padding-bottom: 40px;
+            }
+            .box{
+                margin: 40px 40px 10px 40px;
+                height: 150px;
+                width: 150px;
+                background-size: cover;
+                border-radius: 20px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="home">
+            <div class="navbox">
+                <ul class="nav nav-pills">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="konwledge.html">知识点</a></li>
+                    <li><a href="test.html">测试</a></li>
+                    <li class="active"><a href="#">软件</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                </ul>
+            </div>
+            <img src="img/sorewaretop.png" alt="无法加载" class="top"></img>
+            <div class="container">
+                <p>在这一部分，你可以了解并下载常用的传统统计学软件</p><br>
+                <p>它们能帮助你更好地对数据进行统计！</p><br>
+                <div class="row">
+                    <div>
+                        <a href="content/software/sas.html"><div class="box" style="background-image: url('img/software/sas.png');"></div></a>
+                        <p>SAS</p>
+                    </div>
+                    <div>
+                        <a href="content/software/spss.html"><div class="box" style="background-image: url('img/software/spss.jpg');"></div></a>
+                        <p>SPSS</p>
+                    </div>
+                    <div>
+                        <a href="content/software/excel.html"><div class="box" style="background-image: url('img/software/Excel.png');"></div></a>
+                        <p>Excel</p>
+                    </div>
+                    <div>
+                        <a href="content/software/s-plus.html"><div class="box" style="background-image: url('img/software/s-plus.jpg');"></div></a>
+                        <p>S-PLUS</p>
+                    </div>
+                    <div>
+                        <a href="content/software/minitab.html"><div class="box" style="background-image: url('img/software/minitab.png');"></div></a>
+                        <p>Minitab</p>
+                    </div>
+                    <div>
+                        <a href="content/software/statistica.html"><div class="box" style="background-image: url('img/software/Statistica.png');"></div></a>
+                        <p>Statistica</p>
+                    </div>
+                    <div>
+                        <a href="content/software/eviews.html"><div class="box" style="background-image: url('img/software/Eviews.png');"></div></a>
+                        <p>Eviews</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom"><img src="img/whitetoyou.png" alt="无法加载"><div>
+        </div>
+        <!--js-->
+        <script src="js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+        //绑定事件
+            var lt = $("#left");
+            var rt = $("#right");
+            var navmove = $(".topnav > .nav")
+            var i = 0;
+            lt.mouseover(function(){
+                lt.attr("src","img/leftblue.png");
+            }).mouseout(function(){
+                lt.attr("src","img/left.png");
+            }).click(function(){
+                if(parseInt(navmove.css("right")) < 1020){
+                    rt.attr("style","visibility:visable;");
+                    i += 170;
+                    navmove.attr("style","right:" + i + "px;");
+                }
+                else{
+                    lt.attr("style","visibility:hidden;");
+                }
+            })
+
+            rt.mouseover(function(){
+                rt.attr("src","img/rightblue.png");
+            }).mouseout(function(){
+                rt.attr("src","img/right.png");
+            }).click(function(){2
+                if(parseInt(navmove.css("right")) > 0){
+                    lt.attr("style","visibility:visable;");
+                    i -= 170;
+                    navmove.attr("style","right:" + i + "px;");
+                }
+                else{
+                    rt.attr("style","visibility:hidden;");
+                }
+            })
+        //滚动到某一高度固定
+            var sTop = 0;
+            $("body").scroll(function(){
+                sTop = $(this).scrollTop();//当前滚动高度
+                if(sTop >= 200){//当滚动高度要大于固定div高度时
+                    $(".topnavbox").css({"position":"fixed","top":"70","left":"calc(50% - 641px)"});
+                    totop.attr("style","visibility:visable;");
+                    totopimg.attr("style","visibility:visable;");
+                }else{
+                    $(".topnavbox").css({"position":"relative","left":"0"});
+                    totop.attr("style","visibility:hidden;");
+                    totopimg.attr("style","visibility:hidden;");
+                }
+            });
+        </script>
+    </body>
+</html>

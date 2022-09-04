@@ -1,0 +1,197 @@
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8" >
+        <!--科学公式引入-->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!--载入BootStrap的css-->
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="../../../img/icon.png">
+        <link href="../../../css/navi.css" rel="stylesheet">
+        <!--css-->
+        <style type="text/css">
+            /*总*/
+            html,body{
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                overflow-y: auto; /*主页隐藏*/
+                overflow-x: auto;
+                text-align: center;
+            }
+            @font-face{
+                font-family: "navFont";
+                src: url("../../../fonts/msyhl.ttc");
+                font-family: "navFontActive";
+                src: url("../../../fonts/msyhbd.ttc");
+            }
+            .tophref{
+                position: relative;
+                top: -500px;
+            }
+            .totop{
+                position: fixed;
+                bottom: 45px;
+                right: 100px;
+                background-color: #D6D6D6;
+                height: 40px;
+                width: 40px;
+                padding-top: 10px;
+            }
+            .totop>img{
+                height: 20px;
+                width: 25px;
+            }
+            .topnav>.nav{
+                right: 1020px;
+            }
+            #leftnav>.nav-pills>li.active>a>img, #leftnav>.nav-pills>li.active>a:focus>img, #leftnav>.nav-pills>li.active>a:hover>img{
+                content: url("../../../img/tomore.png");
+                height: 25px;
+                width: 20px;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="home">
+            <div class="navbox">
+                <ul class="nav nav-pills">
+                    <li><a href="../../../index.html">首页</a></li>
+                    <li class="active"><a href="#">知识点</a></li>
+                    <li><a href="../../../test.html">测试</a></li>
+                    <li><a href="../../../software.html">软件</a></li>
+                    <li><a href="../../../about.html">关于我们</a></li>
+                </ul>
+            </div>
+            <a class="tophref" name="top"></a>
+            <img src="../../../img/kownledgetop.png" alt="无法加载" class="top"></img>
+            <div class="topnavbox">
+                <img id="left" src="../../../img/left.png" alt="无法加载" style="cursor: pointer; visibility:hidden;">
+                <div class="topnav">
+                    <ul class="nav nav-pills">
+                        <li><a href="../1/1.1.html">基础概念和术语<div></div></a></li>
+                        <li><a href="../2/2.1.html">描述分布<div></div></a></li>
+                        <li><a href="../3/3.1.html">用图形呈现分布<div></div></a></li>
+                        <li><a href="../4/4.1.html">概率与概率分布<div></div></a></li>
+                        <li><a href="../5/5.1.html">样本统计量的<br>概率分布<div></div></a></li>
+                        <li><a href="../6/6.1.html">参数估计<div></div></a></li>
+                        <li><a href="../7/7.1.html">假设检验<div></div></a></li>
+                        <li><a href="../8/8.1.html">方差分析<div></div></a></li>
+                        <li class="active"><a href="#">相关分析<div></div></a></li>
+                        <li><a href="../10/10.1.html">一元线性回归<div></div></a></li>
+                        <li><a href="../11/11.1.html">卡方检验<div></div></a></li>
+                        <li><a href="../12/12.1.html">量表的<br>信效度检验<div></div></a></li>
+                        <li><a href="../13/13.1.html">聚类分析<div></div></a></li>
+                    </ul>
+                </div>
+                <img id="right" src="../../../img/right.png" alt="无法加载" style="cursor: pointer; visibility:visible;">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div id="leftnav" class="col-md-3 col-xm-3 col-xs-3">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li class="active"><a href="#">相关概念<img></a></li>
+                            <li><a href="9.2.html">皮尔逊积差相关系数<img></a></li>
+                            <li><a href="9.3.html">等级相关系数<img></a></li>
+                            <li><a href="9.4.html">卡方系数<img></a></li>
+                            <li><a href="9.5.html">等级二列相关系数<img></a></li>
+                            <li><a href="9.6.html">点二列相关系数<img></a></li>
+                            <li><a href="9.7.html">多列相关系数<img></a></li>
+                          </ul>
+                    </div>
+                    <div id="rightcontent"class="col-md-9 col-xm-9  col-xs-9">
+                        <p class="head">相关的概念</p>
+                        <p class="headtext">相关分析是研究数量上的共变关系。是信度的一种测量。</p>
+                        <p class="kind">1.相关的关系</p>
+                        <p class="head4">1.1因果关系（causality）-定义</p>
+                        <p>一个变量为某种现象或事件的原因，一个变量为某种现象或事件的结果，原因发生了变化，结果自然也就随之改变。</p>
+                        <p class="head4">1.2共因关系（common cause）-定义</p>
+                        <p>两个变量的变化是同一个潜在原因引起的，那个潜在的原因发生变化，这两个结果自然都随之改变，所以会表现出共同变化的关系。</p>
+                        <hr>
+
+                        <p class="kind">2.相关的方向</p>
+                        <p class="head4">2.1正相关（positive correlation）-定义</p>
+                        <p>正相关是指两个变量在数值上的变化方向一致。即两列变量的数值变化方向是相同的：一个变量的数据由大而小地变化时，另一个变量的数据也随着由大而小地变化。</p>
+                        <p class="head4">2.2负相关（negative correlation）-定义</p>
+                        <p>负相关是指两个变量在数值上地变化方向相反。即两列变量的数值变化方向是相反的：一个变量的数据由大而小变化时，另一个变量的数据却是由小而大地变化。</p>
+                        <p class="head4">2.3零相关（naught correlation）-定义</p>
+                        <p>零相关又称无相关，即两列变量的变化没有关联性。一个变量的变大或变小与另一个变量没有任何关系。</p>
+                        <hr>
+
+                        <p class="kind">3.相关的强度</p>
+                        <p class="head4">3.1强相关-定义</p>
+                        <p>强相关又称高度相关。当一个变量变化时，与之对应的另一个变量也随之变化的可能性较大，或者说跟随其变化的程度比较紧密。</p>
+                        <p class="head4">3.2弱相关-定义</p>
+                        <p>强相关又称为低相关，是指两个变量之间虽然有一定关系，但联系的强度较低。即一个变量变化时，与之对应的另一个变量变化的可能性较小，或者说跟随其变化的程度不太明显。</p>
+                        <p class="head4">3.3完全相关-定义</p>
+                        <p>完全相关指两个变量在取值上具有一一对应或完全确定的关系，两个变量之间的关系也可以表示成一个直线方程式。</p>
+                        <hr>
+
+                        <p class="kind">4.相关的性质</p>
+                        <p class="head4">4.1直线相关-定义</p>
+                        <p>直线相关是指两个变量中的一个变量在增加或减少时，另一个变量也随之增加或减少，它们之间存在一种直线或线性相关关系。积差相关和等级相关都属于直线相关。</p>
+                        <p class="head4">4.2曲线相关-定义</p>
+                        <p>曲线相关也叫非线性相关，是指如果两个变量相伴随的变化未能形成直线相关，其相关就是曲线。对数、指数、幂函数等均属于曲线相关关系。</p>
+                        <hr>
+
+                        <p class="head2">5.相关的直观表示：散点图（scatterplot）-定义</p>
+                        <p>散点图就是一个直角坐标，横坐标代表一个变量，纵坐标代表一个变量。在坐标内用一个个点来表示相关变量的一对对观测值，这些点所形成的形状就可以体现变量之间的相关情况。</p>
+                        <hr>
+
+                        <p class="head2">6.相关的量化：相关系数（correlation coefficient）-定义</p>
+                        <p>散点图可以判断两个变量之间有无相关关系，并对关系形态做出大致描述。而相关系数是度量两个变量之间线性关系强度的统计量，记为\(r\)。</p>
+                        <p>相关系数不但显示了变量间的关系强度，还显示了相关性方向。相关系数可以是正值也可以是负值，正值说明随机变量之间是正相关关系；负值说明是负相关关系。0表明变量之间无线性相关关系，但不表明变量之间没有任何关系，它们之间可能存在非线性相关关系，如曲线关系。</p>
+                        <table class="table table-bordered" style="text-align: center;">
+                            <tr>
+                                <td>\(r\)绝对值的大小</td>
+                                <td>一般解释</td>
+                            </tr>
+                            <tr>
+                                <td>0.8～1.0</td>
+                                <td>高度相关</td>
+                            </tr>
+                            <tr>
+                                <td>0.5～0.8</td>
+                                <td>中度相关</td>
+                            </tr>
+                            <tr>
+                                <td>0.3～0.5</td>
+                                <td>低度相关</td>
+                            </tr>
+                            <tr>
+                                <td>0.0～0.3</td>
+                                <td>弱相关或不相关</td>
+                            </tr>
+                        </table>
+                        <p>相关系数\(r\)的平方\(R^2\)称为<b>决定系数</b>或<b>判定系数（coefficient of determination）</b>，它表示变量\(Y\)的总变异（或方差）中，有多少比例可以被\(X\)变量所解释。</p>
+                        <p>常用的相关系数有：</p>
+                        <p>●  皮尔逊积差相关系数是最常用的指数，适用于两个数值型变量；</p>
+                        <p>●  斯皮尔曼等级相关系数，适用于两列顺序变量；</p>
+                        <p>●  肯德尔等级相关系数，适用于多列顺序变量；</p>
+                        <p>●  计算偏相关系数，用于控制第三变了或其它多个变量的影响。</p>
+                        <hr>
+
+                        <p class="head2">7.假性相关（spurious correlations）-定义</p>
+                        <p>一些很重要的因素会导致相关系数人为地升高或者降低，这些极端的相关性有时被称为假性相关，因为它们并不代表随机变量间的真实关系，也可能是由一些容易引起混淆的因素造成。下列因素可能会导致假性相关的出现。</p>
+                        <p class="kind2">7.1随机变量之间缺乏线性关系</p>
+                        <p>在计算相关系数前，可以先通过散点图来检查变量间的关系是否较大地偏离于线性关系。一些小地线性偏离不会显著影响相关系数的大小，但是大的偏离却会对其产生影响。</p>
+                        <p class="kind2">7.2样本容量</p>
+                        <p>由于样本容量太小，导致假性相关。因此样本容量的大小应能足够代表需要描述的总体。</p>
+                        <p class="kind2">7.3离群点</p>
+                        <p>当样本容量很小时，X或Y测量值中，只要有一个非常大或非常小的值就会导致相关系数发生很大的变化。随着样本容量的增大，极值的影响会减弱，但通过观察散点图的分布来确定离群数值是非常重要的。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom"><img src="../../../img/whitetoyou.png" alt="无法加载"><div>
+            <a href="#top"><div class="totop" style="visibility:hidden;"><img src="../../../img/whitetotop.png" alt="无法加载"  style="visibility:hidden;"></div><a>
+        </div>
+        <!--js-->
+        <script src="../../../js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../../js/know.js"></script>
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>

@@ -1,0 +1,168 @@
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8" >
+        <!--科学公式引入-->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!--载入BootStrap的css-->
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="../../../img/icon.png">
+        <link href="../../../css/navi.css" rel="stylesheet">
+        <!--css-->
+        <style type="text/css">
+            /*总*/
+            html,body{
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                overflow-y: auto; /*主页隐藏*/
+                overflow-x: auto;
+                text-align: center;
+            }
+            @font-face{
+                font-family: "navFont";
+                src: url("../../../fonts/msyhl.ttc");
+                font-family: "navFontActive";
+                src: url("../../../fonts/msyhbd.ttc");
+            }
+            .tophref{
+                position: relative;
+                top: -500px;
+            }
+            .totop{
+                position: fixed;
+                bottom: 45px;
+                right: 100px;
+                background-color: #D6D6D6;
+                height: 40px;
+                width: 40px;
+                padding-top: 10px;
+            }
+            .totop>img{
+                height: 20px;
+                width: 25px;
+            }
+            #leftnav>.nav-pills>li.active>a>img, #leftnav>.nav-pills>li.active>a:focus>img, #leftnav>.nav-pills>li.active>a:hover>img{
+                content: url("../../../img/tomore.png");
+                height: 25px;
+                width: 20px;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="home">
+            <div class="navbox">
+                <ul class="nav nav-pills">
+                    <li><a href="../../../index.html">首页</a></li>
+                    <li class="active"><a href="#">知识点</a></li>
+                    <li><a href="../../../test.html">测试</a></li>
+                    <li><a href="../../../software.html">软件</a></li>
+                    <li><a href="../../../about.html">关于我们</a></li>
+                </ul>
+            </div>
+            <a class="tophref" name="top"></a>
+            <img src="../../../img/kownledgetop.png" alt="无法加载" class="top"></img>
+            <div class="topnavbox">
+                <img id="left" src="../../../img/left.png" alt="无法加载" style="cursor: pointer; visibility:visible;">
+                <div class="topnav">
+                    <ul class="nav nav-pills">
+                        <li><a href="../1/1.1.html">基础概念和术语<div></div></a></li>
+                        <li><a href="../2/2.1.html">描述分布<div></div></a></li>
+                        <li><a href="../3/3.1.html">用图形呈现分布<div></div></a></li>
+                        <li><a href="../4/4.1.html">概率与概率分布<div></div></a></li>
+                        <li><a href="../5/5.1.html">样本统计量的<br>概率分布<div></div></a></li>
+                        <li><a href="../6/6.1.html">参数估计<div></div></a></li>
+                        <li class="active"><a href="#">假设检验<div></div></a></li>
+                        <li><a href="../8/8.1.html">方差分析<div></div></a></li>
+                        <li><a href="../9/9.1.html">相关分析<div></div></a></li>
+                        <li><a href="../10/10.1.html">一元线性回归<div></div></a></li>
+                        <li><a href="../11/11.1.html">卡方检验<div></div></a></li>
+                        <li><a href="../12/12.1.html">量表的<br>信效度检验<div></div></a></li>
+                        <li><a href="../13/13.1.html">聚类分析<div></div></a></li>
+                    </ul>
+                </div>
+                <img id="right" src="../../../img/right.png" alt="无法加载" style="cursor: pointer; visibility:hidden;">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div id="leftnav" class="col-md-3 col-xm-3 col-xs-3">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="7.1.html">基本概念和术语<img></a></li>
+                            <li><a href="7.2.html">一个总体参数的检验<img></a></li>
+                            <li class="active"><a href="7.3.html">两个总体参数的检验<img></a></li>
+                          </ul>
+                    </div>
+                    <div id="rightcontent"class="col-md-9 col-xm-9  col-xs-9">
+                        <p class="head">两个总体参数的检验</p>
+                        <p class="kind">1.两个总体均值之差的检验</p>
+                        <p class="head2">1.1独立大样本的平均数之差检验</p>
+                        <p>第一个正态总体\((μ_1，σ_1^2)\)中随机抽取容量为\(n_1\)的样本，计算出平均数\(\overline x_1\)；再从第二个正态总体\(μ_2，σ_2^2\)中随机抽取容量为\(n_2\)的样本，计算出平均数\(\overline x_2\)。在大样本情况下，两个样本平均数之差\(D_x= \overline x_1-\overline x_2\)的抽样分布近似服从正态分布，并且经过标准化后则服从标准正态分布。</p>
+                        <p>其平均数为：\(μ_{D_x}=μ_1-μ_2\)</p>
+                        <p>标准差为：\(σ_{D_x}=\sqrt{{σ^2_1\over n_1}+{σ^2_2\over n_2}}\)</p>
+                        <p>统计量\(Z\)可表示为：\(Z={μ_{D_x} \over σ_{D_x}} = {{(\overline x_1- \overline x_2)-(μ_1-μ_2)}\over{\sqrt{{σ^2_1\over n_1}+{σ^2_2\over n_2}}}}\)</p>
+                        <p class="head3">举例:</p>
+                        <p>如果两个总体方差\(σ_1^2\)和\(σ_2^2\)未知，可分别用\(s_1^2\)和\(s_2^2\)代替，此时检验统计量可换为：</p>
+                        <p class="math">\(Z={μ_{D_x} \over σ_{D_x}} = {{(\overline x_1- \overline x_2)-(μ_1-μ_2)}\over{\sqrt{{s^2_1\over n_1}+{s^2_2\over n_2}}}}\)</p>
+                        <p class="head3">举例:</p>
+                        <hr>
+
+                        <p class="head2">1.2独立小样本的平均数之差检验</p>
+                        <p>当两个样本都是独立小样本时，此时要求两个总体都服从正态分布。检验时有以下三种情况：</p>
+                        <p>●  如果总体方差\(σ_1^2\)和\(σ_2^2\)已知，无论样本量的大小，两个样本均值之差的抽样分布都服从正态分布，此时检验式子用：</p>
+                        <p class="math">\(Z={μ_{D_x} \over σ_{D_x}} = {{(\overline x_1- \overline x_2)-(μ_1-μ_2)}\over{\sqrt{{σ^2_1\over n_1}+{σ^2_2\over n_2}}}}\)</p>
+                        <p>●  如果总体方差未知但相等，即\(σ_1^2=σ_2^2\)时，则需要将样本方差\(s_1^2\)和\(s_2^2\)合并为\(s_p^2\),从而对总体方差进行评估。合并公式为：</p>
+                        <p class="math">\(s^2_1={{(n_1-1)s_1^2+(n_2-1)s_2^2}\over{n_1+n_2-2}}\)</p>
+                        <p>两个样本均值之差经过标准化后服从自由度为\((n_1+n_2-2)\)的\(t\)分布，采用的检验统计量为：</p>
+                        <p class="math">\(t={{(\overline x_1-\overline x_2)-(μ_1-μ_2)}\over{s_p\sqrt{{1\over {n_1}}+{1\over{n_2}}}}}\)</p>
+                        <p>●  总体方差未知且不相等时，即\(σ_1^2≠σ_2^2\)时，样本均值之差标准化后不再服从自由度为\((n_1+n_2-2)\)的\(t\)分布，而是近似服从自由度为\(ν\)的\(t\)分布。这时检验的统计量为：</p>
+                        <p class="math">\(t={{(\overline x_1-\overline x_2)-(μ_1-μ_2)}\over{\sqrt{{s_1^2\over {n_1}}+{s_2^2\over{n_2}}}}}\)</p>
+                        <p>其统计量的自由度为\(ν\)，计算公式为：</p>
+                        <p class="math">\(v={{({s_1^2\over {n_1}}+{s_2^2\over{n_2}})^2}\over{{(s_1^2/n_1)^2\over {n_1-1}}+{(s_2^2/n_1)^2\over {n_2-1}}}}\)</p>
+                        <p class="head3">举例:</p>
+                        <hr>
+
+                        <p class="head2">1.3相关样本的平均数之差检验</p>
+                        <p>相关样本一般在两种情形下产生：一是采用配对组的实验设计；二是采用同一样本前后测量设计。由于相关样本的每一个样本中，每一个数据都有另一个样本中唯一数据与之配对，所以一般两个样本的测量数据都是成对的。因此可以求出每对数据的差值d，如果假设两个总体均值相等\(μ_1=μ_2\)，那么\(μ_d=μ_1-μ_2=0\),于是可以把相关样本的检验问题转化为对d进行的单样本显著性检验问题，检验假设为：\(μ_d=0\)。</p>
+                        <p>相关样本的检验需要符合三个条件：</p>
+                        <p>●  假定两个总体的配对差值d构成的总体服从正态分布；</p>
+                        <p>●  配对差值是由差值总体中随机抽取的；</p>
+                        <p>●  测量数据是成对的或配对的。</p>
+                        <p>此时的检验统计量为：</p>
+                        <p class="math">\(t={{\overline d - d_0}\over{s_d/\sqrt{n_d}}}\)~\(t(n-1)\)</p>
+                        <p>样本差值均值计算公式为：</p>
+                        <p class="math">\(\overline d={\sum_{i=1}^nd_i\over n_d}\)</p>
+                        <p>样本差值标准差计算公式：</p>
+                        <p class="math">\(s_d=\sqrt{\sum_{i=1}^n({d_i-\overline d})^2 \over n_d}\)</p>
+                        <p class="head3">举例:</p>
+                        <hr>
+
+                        <p class="kind">2.两个总体比例之差的检验</p>
+                        <p>两个总体比例之差检验的统计量为\(Z\)值：</p>
+                        <p class="math">\(Z = {{P_1-P_2}\over \sqrt{p(1-p)({1\over n_1}+{1\over n_2})}}\)</p>
+                        <p>其中：</p>
+                        <p class="math">\(p={x_1+x_2\over{n_1+n_2}}={{p_1n_1+p_2n_2}\over {n_1+n_2}}\)</p>
+                        <p class="head3">举例:</p>
+                        <hr>
+
+                        <p class="kind">3.两个总体方差之比的检验(方差齐性检验)</p>
+                        <p>检验两个样本方差之比\(s_1^2 \over s_2^2\)是否接近1来达到目的，如果接近1，说明两个总体方差\(σ_1^2\)和\(σ_2^2\)很接近；如果比值结果远离1，说明\(σ_1^2\)和\(σ_2^2\)之间有较大差异。两个总体正态分布的条件下，两个方差之比服从F分布，自由度分别为\(n_1-1\)和\(n_2-1\)。公式为：</p>
+                        <p class="head3">举例:</p>
+                        <p class="math">\(F={{s_1^2/σ_1^2}\over{s_2^2/σ_2^2}}={s_1^2\over s_2^2}\)</p>
+                        <p>在双侧检验中，拒绝域在F分布的两侧，两个临界点的位置分别为：\(F_(a/2)(n_1-1,n_2-1)\),\(F_(1-a/2)(n_1-1,n_2-1)\)。</p>
+                        <p>其中：\(F_{1-{a\over2}}(n_1-1,n_2-1)= {1\over{F_{a \over 2} (n_2-1,n_1-1)}}\)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom"><img src="../../../img/whitetoyou.png" alt="无法加载"><div>
+            <a href="#top"><div class="totop" style="visibility:hidden;"><img src="../../../img/whitetotop.png" alt="无法加载"  style="visibility:hidden;"></div><a>
+        </div>
+        <!--js-->
+        <script src="../../../js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../../js/know.js"></script>
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>

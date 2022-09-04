@@ -1,0 +1,164 @@
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8" >
+        <!--科学公式引入-->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!--载入BootStrap的css-->
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="../../../img/icon.png">
+        <link href="../../../css/navi.css" rel="stylesheet">
+        <!--css-->
+        <style type="text/css">
+            /*总*/
+            html,body{
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                overflow-y: auto; /*主页隐藏*/
+                overflow-x: auto;
+                text-align: center;
+            }
+            @font-face{
+                font-family: "navFont";
+                src: url("../../../fonts/msyhl.ttc");
+                font-family: "navFontActive";
+                src: url("../../../fonts/msyhbd.ttc");
+            }
+            .tophref{
+                position: relative;
+                top: -500px;
+            }
+            .totop{
+                position: fixed;
+                bottom: 45px;
+                right: 100px;
+                background-color: #D6D6D6;
+                height: 40px;
+                width: 40px;
+                padding-top: 10px;
+            }
+            .totop>img{
+                height: 20px;
+                width: 25px;
+            }
+            #leftnav>.nav-pills>li.active>a>img, #leftnav>.nav-pills>li.active>a:focus>img, #leftnav>.nav-pills>li.active>a:hover>img{
+                content: url("../../../img/tomore.png");
+                height: 25px;
+                width: 20px;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="home">
+            <div class="navbox">
+                <ul class="nav nav-pills">
+                    <li><a href="../../../index.html">首页</a></li>
+                    <li class="active"><a href="#">知识点</a></li>
+                    <li><a href="../../../test.html">测试</a></li>
+                    <li><a href="../../../software.html">软件</a></li>
+                    <li><a href="../../../about.html">关于我们</a></li>
+                </ul>
+            </div>
+            <a class="tophref" name="top"></a>
+            <img src="../../../img/kownledgetop.png" alt="无法加载" class="top"></img>
+            <div class="topnavbox">
+                <img id="left" src="../../../img/left.png" alt="无法加载" style="cursor: pointer; visibility:visible;">
+                <div class="topnav">
+                    <ul class="nav nav-pills">
+                        <li class="active"><a href="#">基础概念和术语<div></div></a></li>
+                        <li><a href="../2/2.1.html">描述分布<div></div></a></li>
+                        <li><a href="../3/3.1.html">用图形呈现分布<div></div></a></li>
+                        <li><a href="../4/4.1.html">概率与概率分布<div></div></a></li>
+                        <li><a href="../5/5.1.html">样本统计量的<br>概率分布<div></div></a></li>
+                        <li><a href="../6/6.1.html">参数估计<div></div></a></li>
+                        <li><a href="../7/7.1.html">假设检验<div></div></a></li>
+                        <li><a href="../8/8.1.html">方差分析<div></div></a></li>
+                        <li><a href="../9/9.1.html">相关分析<div></div></a></li>
+                        <li><a href="../10/10.1.html">一元线性回归<div></div></a></li>
+                        <li><a href="../11/11.1.html">卡方检验<div></div></a></li>
+                        <li><a href="../12/12.1.html">量表的<br>信效度检验<div></div></a></li>
+                        <li><a href="../13/13.1.html">聚类分析<div></div></a></li>
+                    </ul>
+                </div>
+                <img id="right" src="../../../img/right.png" alt="无法加载" style="cursor: pointer; visibility:hidden;">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div id="leftnav" class="col-md-3 col-xm-3 col-xs-3">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="1.1.html">总体<img></a></li>
+                            <li><a href="1.2.html">样本<img></a></li>
+                            <li><a href="1.3.html">个数<img></a></li>
+                            <li><a href="1.4.html">参数<img></a></li>
+                            <li><a href="1.5.html">统计量<img></a></li>
+                            <li><a href="1.6.html">独立性与相关性<img></a></li>
+                            <li><a href="1.7.html">自由度<img></a></li>
+                            <li><a href="1.8.html">频数<img></a></li>
+                            <li><a href="1.9.html">比例<img></a></li>
+                            <li><a href="1.10.html">百分比<img></a></li>
+                            <li><a href="1.11.html">比率<img></a></li>
+                            <li><a href="1.12.html">随机变量<img></a></li>
+                            <li class="active"><a href="#">测量的误差<img></a></li>
+                            <li><a href="1.14.html">测量的精度<img></a></li>
+                          </ul>
+                    </div>
+                    <div id="rightcontent"class="col-md-9 col-xm-9  col-xs-9">
+                        <p class="head">测量误差 error</p>
+                        <p class="kind">1.系统误差/规律误差（systematical error）/（regular error）-定义</p>
+                        <p>由于过失性错误（工具不准、方法不对、人为出错等）产生的误差，一般是可以避免和消除的。系统误差是在偏离规定严格条件下多次调查同一属性或特征时，误差的绝对值和符号保持恒定；或在测量条件改变时，误差按某一确定的规律变化。</p>
+                        <p class="head2">1.1仪器误差（Instrument error）-定义</p>
+                        <p>由于仪器本身的缺陷或没有按照规定条件使用仪器造成的误差。</p>
+                        <p class="head3">举例:</p>
+                        <p class="head2">1.2理论误差/方法误差（theoretical error）/（method error）-定义</p>
+                        <p>由于测量所依据的理论公式本身的近似性，实验条件不能达到理论公式所规定的要求，或者是实验方法本身不完善所带来的误差。</p>
+                        <p class="head3">举例:</p>
+                        <p class="head2">1.3个人误差（personal error）-定义</p>
+                        <p>由于观测者个人感官和运动器官的反应或习惯不同而产生的误差。</p>
+                        <p class="head3">举例:</p>
+                        <hr>
+
+                        <p class="kind">2.随机误差（random error）-定义</p>
+                        <p>指在实际调查中，多次调查同一客体的同一属性或特征时。误差的绝对值和符号时大时小，时正时负，没有确定的规律，但调查次数足够多时，其平均值趋于0。</p>
+                        <hr>
+
+                        <p class="kind">3.抽样调查所产生的误差</p>
+                        <p class="head2">3.1非抽样误差（nonsampling Erro）-定义</p>
+                        <p>是由随机抽样的偶然性因素以外的原因引起的误差。例如调查方案中有关规定或解释不明导致的填报错误，或由于工作失误造成的计量错误、计算错误、抄录错误和汇总错误，以及调查者或被调查者有意弄虚作假、虚假瞒报等。</p>
+                        <p>可以通过严格调查程序、规范调查步骤、加强人员培训和管理、合理设计调查问卷、改进测量方法和工具等方法避免、消除或减小误差。</p>
+                        <p class="head3">举例:</p>
+                        <p class="head2">3.2抽样误差（sampling error）-定义</p>
+                        <p>样本估计值与被推断的总体真实之差，实际上就是局部的样本统计量对整体的总体参数作出估计所引起的误差</p>
+                        <p class="head3">举例:</p>
+                        <p class="math"><b>（总误差）\(^2=\)（抽样误差）\(^2+\)（非抽样误差）\(^2\)</b></p>
+                        <p class="head4">3.2.1标准误（standard error）-定义</p>
+                        <p>样本统计量的标准差称为<b>标准误</b>，标准误又称<b>抽样误差</b>，是描述抽样误差大小的尺度。</p>
+                        <p>标准误和样本标准差有区别，<b>标准误</b>是所有样本平均值的标准差；<b>样本标准差</b>是某个样本所有取值的标准差。</p>
+                        <p>标准误（\(s_x\)）和样本标准差（\(s\)）之间的关系：</p>
+                        <p class="math">\(s_x={s\over\sqrt n}\)</p>
+                        <p>样本量越大，标准误越小，抽样误差也越小，表明所抽取的样本能够较好地代表总体。</p>
+                        <p class="head3">举例:</p>
+                        <p class="head4">3.2.2误差限（error limit）-定义</p>
+                        <p>指样本特征值与总体特征之间可能地误差范围的绝对值。</p>
+                        <p>误差限（Δ）、总体样本特征值（\(\hatθ\)）和总体特征值（\(θ\)）关系：</p>
+                        <p class="math">\(|{\hatθ}-θ|\leΔ\)</p>
+                        <p class="math">或</p>
+                        <p class="math">\({\hatθ}-Δ\leθ\le{\hatθ}+Δ\)</p>
+                        <p class="head3">举例:</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="bottom"><img src="../../../img/whitetoyou.png" alt="无法加载"><div>
+            <a href="#top"><div class="totop" style="visibility:hidden;"><img src="../../../img/whitetotop.png" alt="无法加载"  style="visibility:hidden;"></div><a>
+        </div>
+        <!--js-->
+        <script src="../../../js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../../js/know.js"></script>
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>

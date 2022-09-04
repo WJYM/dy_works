@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8" >
+        <!--科学公式引入-->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!--载入BootStrap的css-->
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="../../../img/icon.png">
+        <link href="../../../css/navi.css" rel="stylesheet">
+        <!--css-->
+        <style type="text/css">
+            /*总*/
+            html,body{
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                overflow-y: auto; /*主页隐藏*/
+                overflow-x: auto;
+                text-align: center;
+            }
+            @font-face{
+                font-family: "navFont";
+                src: url("../../../fonts/msyhl.ttc");
+                font-family: "navFontActive";
+                src: url("../../../fonts/msyhbd.ttc");
+            }
+            .tophref{
+                position: relative;
+                top: -500px;
+            }
+            .totop{
+                position: fixed;
+                bottom: 45px;
+                right: 100px;
+                background-color: #D6D6D6;
+                height: 40px;
+                width: 40px;
+                padding-top: 10px;
+            }
+            .totop>img{
+                height: 20px;
+                width: 25px;
+            }
+            #leftnav>.nav-pills>li.active>a>img, #leftnav>.nav-pills>li.active>a:focus>img, #leftnav>.nav-pills>li.active>a:hover>img{
+                content: url("../../../img/tomore.png");
+                height: 25px;
+                width: 20px;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="home">
+            <div class="navbox">
+                <ul class="nav nav-pills">
+                    <li><a href="../../../index.html">首页</a></li>
+                    <li class="active"><a href="#">知识点</a></li>
+                    <li><a href="../../../test.html">测试</a></li>
+                    <li><a href="../../../software.html">软件</a></li>
+                    <li><a href="../../../about.html">关于我们</a></li>
+                </ul>
+            </div>
+            <a class="tophref" name="top"></a>
+            <img src="../../../img/kownledgetop.png" alt="无法加载" class="top"></img>
+            <div class="topnavbox">
+                <img id="left" src="../../../img/left.png" alt="无法加载" style="cursor: pointer; visibility:visible;">
+                <div class="topnav">
+                    <ul class="nav nav-pills">
+                        <li><a href="../1/1.1.html">基础概念和术语<div></div></a></li>
+                        <li><a href="../2/2.1.html">描述分布<div></div></a></li>
+                        <li><a href="../3/3.1.html">用图形呈现分布<div></div></a></li>
+                        <li><a href="../4/4.1.html">概率与概率分布<div></div></a></li>
+                        <li><a href="../5/5.1.html">样本统计量的<br>概率分布<div></div></a></li>
+                        <li class="active"><a href="#">参数估计<div></div></a></li>
+                        <li><a href="../7/7.1.html">假设检验<div></div></a></li>
+                        <li><a href="../8/8.1.html">方差分析<div></div></a></li>
+                        <li><a href="../9/9.1.html">相关分析<div></div></a></li>
+                        <li><a href="../10/10.1.html">一元线性回归<div></div></a></li>
+                        <li><a href="../11/11.1.html">卡方检验<div></div></a></li>
+                        <li><a href="../12/12.1.html">量表的<br>信效度检验<div></div></a></li>
+                        <li><a href="../13/13.1.html">聚类分析<div></div></a></li>
+                    </ul>
+                </div>
+                <img id="right" src="../../../img/right.png" alt="无法加载" style="cursor: pointer; visibility:hidden;">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div id="leftnav" class="col-md-3 col-xm-3 col-xs-3">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="6.1.html">参数估计的基本原理<img></a></li>
+                            <li><a href="6.2.html">总体平均数的区间估计<img></a></li>
+                            <li><a href="6.3.html">总体比例的区间估计<img></a></li>
+                            <li><a href="6.4.html">总体方差的区间估计<img></a></li>
+                            <li class="active"><a href="#">样本量的确定<img></a></li>
+                          </ul>
+                    </div>
+                    <div id="rightcontent"class="col-md-9 col-xm-9  col-xs-9">
+                        <p class="head">样本量的确定</p>
+                        <p class="kind">1.估计总体均值时样本量的确定</p>
+                        <p class="head2">1.1估计一个总体均值时样本量的确定</p>
+                        <p>总体均值的置信区间由样本均值\(\overline x\)和估计误差两部分组成。在重复抽样或无限总体抽样的条件下，估计误差为\(Z_{a\over 2}{σ\over\sqrt n}\)。\(Z_{a\over 2}\)的值和样本量\(n\)共同确定了估计误差的大小。一旦确定了置信水平\(1-α\)，\(Z_{a\over 2}\)的值也就确定了。对于给定的\(Z_{a\over 2}\)的值和总体标准差\(σ\)，可以确定任一允许的估计误差所需要的样本量。令\(E\)代表允许的误差估计，可以推导出所需要的样本量的计算公式如下：</p>
+                        <p class="math">\(n=({Z_{a\over 2})^2σ^2}\over E^2\)</p>
+                        <p>上式中，\(Z_{a\over 2}\)是想要达到的置信度的临界\(Z\)值；\(E\)是在给定的置信水平下可以接受的估计误差；\(σ\)是总体标准差。</p>
+                        <p>由上式可以看出，样本容量\(n\)并不依赖于总体容量\((N)\)；样本容量依赖于想要达到的置信度、误差限和标准差\(σ\)的取值。在其他条件不变的情况下，样本量与置信水平成正比，置信水平越高，所需的样本量也就越大；样本量与总体方差与置信水平成正比，置信水平越高，总体的差异越大，所要求的样本量也越大；样本量与估计误差的平方成反比，即允许的估计误差的平方越大，所需的样本量就越小。简而言之，要求一个很有把握或精度很高的估计，就需要更大的样本量。</p>
+                        <p class="head3">举例:</p>
+                        <hr>
+
+                        <p class="head2">1.2估计两个总体均值之差时样本的确定</p>
+                        <p>在估计两个总体均值之差时，样本量的确定方法与上述类似。对于给定的估计误差和置信水平\(1-α\)，估计两个总体均值之差所需的样本量为：</p>
+                        <p class="math">\(n_1=n_2={{({Z_a\over 2})^2(σ^2_1+σ^2_2)}\over E^2}\)</p>
+                        <p>上式中，\(n_1\)和\(n_2\)分别来自两个总体的样本量，\(σ_1^2\)和\(σ_2^2\)分别为两个总体的方差。</p>
+                        <p class="head3">举例:</p>
+                        <hr>
+
+                        <p class="kind">2.估计总体比例时样本量的确定</p>
+                        <p class="head2">2.1估计一个总体比例时样本量的确定</p>
+                        <p>与估计总体均值时的确定方法类似，在重复抽样或无限总体的抽样条件下，估计总体比例置信区间的估计误差为\({Z_a\over 2}\sqrt{π(1-π)\over n}\)，\(Z_a\over 2\)的值、总体比例π和样本量n共同确定了估计误差的大小。由于总体比例的值是固定的，因此估计误差由样本量来确定，样本量越大，估计误差就越小，估计的精度就约好。因此，对于给定的\(Z_a\over 2\)的值，可以计算出一定的允许估计量条件下所需要的样本量。令\(E\)代表允许的估计误差，可以推导估计总体比例时所需的样本量，计算公式如下：</p>
+                        <p class="math">\(n={({Z_a\over 2})^2π(1-π)\over E^2}\)</p>
+                        <p class="head3">举例:</p>
+                        <hr>
+
+                        <p class="head2">2.2估计两个总体比例之差时样本量的确定</p>
+                        <p>对于给定的估计误差和置信水平\(1-α\)，估计两个总体比例之差所需的样本量为：</p>
+                        <p class="math">\(n1=n2={{({Z_a\over 2})^2[π_1(1-π_1)+π_2(1-π_2)]}\over E^2}\)<p>
+                        <p>上式中，\(n_1\)和\(n_2\)分别来自两个总体的样本量，\(σ_1^2\)和\(σ_2^2\)分别为两个总体的方差。</p>
+                        <p class="head3">举例:</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom"><img src="../../../img/whitetoyou.png" alt="无法加载"><div>
+            <a href="#top"><div class="totop" style="visibility:hidden;"><img src="../../../img/whitetotop.png" alt="无法加载"  style="visibility:hidden;"></div><a>
+        </div>
+        <!--js-->
+        <script src="../../../js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../../js/know.js"></script>
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>

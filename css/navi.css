@@ -1,0 +1,220 @@
+/*主要的nav*/
+.navbox{
+    background-color: #2A82E4;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+.navbox>.nav{
+    width: 760px;
+    height: 70px;
+    display: inline-block;/*水平居中设定*/
+}
+.navbox>.nav-pills>li.active>a, .navbox>.nav-pills>li.active>a:focus, .navbox>.nav-pills>li.active>a:hover{
+    background-color: #09005C;
+    color: white;
+    font-family: "navFontActive";
+}
+.navbox>.nav>li>a{
+    border-radius: 0px;
+    font-size: 20px;
+    font-family: "navFont";
+    width: 150px;
+    height: 70px;
+    color: white;
+    display: table-cell;/*垂直居中设定*/
+    text-align: center;
+    vertical-align: middle;
+}
+.navbox>.nav>li>a:hover{
+    color: #2A82E4;
+}
+
+/*知识点的横向nav*/
+.top{
+    position: relative;
+    top: 70px;
+    height: 200px;
+    width: 100%;
+}
+.topnavbox{
+    position: relative;
+    z-index: 1;
+    top: 70px;
+    width: 1265px;
+    display: inline-block;
+    background-color: white;
+}
+.topnavbox>img{
+    position: relative;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+.topnav{
+    height: 80px;
+    width: 1205px;
+    text-align: center;
+    overflow: hidden;
+    float: left;
+}
+.topnav>.nav{
+    width: 2235px;
+    position: relative;
+    right: 0;
+}
+.topnav>.nav-pills>li.active>a, .topnav>.nav-pills>li.active>a:focus, .topnav>.nav-pills>li.active>a:hover{
+    color: #000;
+    font-family: "navFont";
+    background-color: white;
+    box-shadow:none;
+}
+.topnav>.nav-pills>li.active>a>div, .topnav>.nav-pills>li.active>a:focus>div, .topnav>.nav-pills>li.active>a:hover>div{
+    position: absolute;
+    bottom: 0px;
+    background-color: #2A82E4;
+    height: 10px;
+    width: 140px;
+}
+.topnav>.nav>li>a{
+    position: static;
+    font-size: 20px;
+    font-family: "navFont";
+    width: 170px;
+    height: 70px;
+    color: #A6A6A6;
+    display: table-cell;/*垂直居中设定*/
+    text-align: center;
+    vertical-align: middle;
+}
+.topnav>.nav>li>a:hover{
+    box-shadow:10px 10px 10px -5px #00000074;
+}
+
+/*知识点左侧nav*/
+.container{
+    color: #2A82E4;
+    font-size: 30px;
+    font-family: "navFont";
+    position: relative;
+    top: 100px;
+}
+#leftnav{
+    padding: 0;
+    position: relative;
+    right: 5px;
+    background: #2A82E4;
+    height: 1000px;/*左菜单栏高低*/
+}
+#leftnav>.nav-pills{
+    position: relative;
+    top: 20px;
+}
+#leftnav>.nav-pills>li.active>a, #leftnav>.nav-pills>li.active>a:focus, #leftnav>.nav-pills>li.active>a:hover{
+    background-color: white;
+    color: black;
+    font-family: "navFont";
+}
+#leftnav>.nav>li>a{
+    padding: 16px 30px;
+    border-radius: 0px;
+    font-size: 20px;
+    font-family: "navFont";
+    color: white;
+    text-align: left;
+}
+#leftnav>.nav>li>a:hover{
+    color: white;
+    background-color: #57A5FF;
+}
+
+/*右侧内容*/
+hr{
+    border-top: 1px solid #A6A6A6;
+
+}
+#rightcontent{
+    border: 3px solid #2A82E4;
+    position: relative;
+    right: -5px;
+    background: white;
+    height: 1000px;/*右内容栏高低*/
+    overflow-y: scroll;
+ }
+#rightcontent>p.head{
+    text-indent:0em;
+    margin: 40px 30px;
+    font-size: 40px;
+    font-family: "navFontActive";
+    color: #2A82E4;
+}
+#rightcontent>p.headtext{
+    text-indent:2em;
+    margin: 0px 30px 40px 30px;
+}
+#rightcontent>p.kind{
+    color: #000;
+    text-indent:0em;
+    margin: 20px 30px 20px 30px;
+    font-size: 20px;
+    font-family: "navFontActive";
+}
+#rightcontent>p.head2{
+    color: #2A82E4;
+    text-indent:0em;
+    margin: 20px 30px 20px 30px;
+    font-size: 20px;
+    font-family: "navFontActive";
+}
+#rightcontent>p.head3{
+    color: #000;
+    text-indent:0em;
+    margin: 20px 30px 0px 30px;
+    font-size: 20px;
+    font-family: "navFontActive";
+}
+#rightcontent>p.head4{
+    color: #2A82E4;
+    text-indent:2em;
+    margin: 20px 30px 20px 30px;
+    font-size: 20px;
+    font-family: "navFontActive";
+}
+#rightcontent>p.kind2{
+    color: #000;
+    text-indent:2em;
+    margin: 20px 30px 20px 30px;
+    font-size: 20px;
+    font-family: "navFontActive";
+}
+#rightcontent>p{
+    text-indent:2em;
+    margin: 0 30px 10px 30px;
+    font-size: 16px;
+    font-family: "navFont";
+    color: #000;
+    text-align: left;
+}
+#rightcontent>p.math{
+    text-align: center;
+}
+#rightcontent>img{
+    width: 100%;
+}
+
+/*尾页*/
+.bottom{
+    position: relative;
+    top: 200px;
+    height: 300px;
+    width: 100%;
+    background: #2A82E4;
+}
+.bottom>img{
+    position: relative;
+    height: 100px;
+    top: 100px;
+    right: 300px;
+}

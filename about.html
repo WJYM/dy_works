@@ -1,0 +1,182 @@
+<html>
+    <head>
+        <title>统优-关于我们</title>
+        <meta charset="UTF-8" >
+        <!--载入BootStrap的css-->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="img/icon.png">
+        <link href="css/navi.css" rel="stylesheet">
+        <!--css-->
+        <style type="text/css">
+            /*总*/
+            html,body{
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                overflow-y: auto; /*主页隐藏*/
+                overflow-x: auto;
+            }
+            @font-face{
+                font-family: "navFont";
+                src: url("fonts/msyhl.ttc");
+                font-family: "navFontActive";
+                src: url("fonts/msyhbd.ttc");
+            }
+            
+            /*单*/
+            .top{
+                margin-bottom: 20px;
+            }
+            .about{
+                text-align: center;
+                position: relative;
+                top: 70px;
+            }
+            .color_size{
+                font-size: 30px;
+                color: #2A82E4;
+            }
+            .info{
+                display: flex;
+                /* 平分父div的宽度 */
+                width: 100%;
+                margin: 50px 0;
+                justify-content: center;
+                align-items:flex-end;
+            }
+            .circle1{
+                border: 3px solid #000;
+                width: 130px;
+                height: 130px;
+                background-image: url("img/circle.jpg");
+                background-size: cover;
+                border-radius: 150px;
+            }
+            .circle2{
+                border: 3px solid #000;
+                width: 130px;
+                height: 130px;
+                background-image: url("img/circle2.jpg");
+                background-size: cover;
+                border-radius: 150px;
+            }
+            .info_lco{
+                margin: 0 40px 10px 20px;
+                text-align: left;
+            }
+            .email{
+                font-size: 20px;
+                letter-spacing: 0.2em;
+            }
+            .name{
+                font-family: "navFontActive";
+                font-size: 30px;
+            }
+            .tablebox{
+                display: flex;
+                justify-content: center;
+                text-align: right;
+            }
+            .tabletitle{
+                font-family: "navFontActive";
+                font-size: 25px;
+                margin-top: 40px;
+                color: #2A82E4;
+                text-align: left;
+            }
+            .wid{
+                border-radius: 10px;
+                font-size: 25px;
+                color: #A6A6A6;
+                padding: 20px;
+                height: 60px;
+            }
+            .form-control {
+                display: inline-block;
+            }
+            button{
+                margin: 40px 0;
+                padding: 6px 30px;
+                border: 2px solid #2A82E4;
+                border-radius: 200px;
+                font-family: "navFontActive";
+                font-size: 25px;
+                color: #2A82E4;
+                outline: 0;
+            }
+            button:hover{
+                color: #000;
+            }
+            .bottom{
+                top: 100px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="home">
+            <div class="navbox">
+                <ul class="nav nav-pills">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="konwledge.html">知识点</a></li>
+                    <li><a href="test.html">测试</a></li>
+                    <li><a href="software.html">软件</a></li>
+                    <li class="active"><a href="#">关于我们</a></li>
+                </ul>
+            </div>
+            <img src="img/abouttop.png" alt="无法加载" class="top"></img>
+        
+            <!--关于我们-->
+            <div class="about">
+                <br>
+                <p class="color_size">我们是来自汕头大学的毕业设计团队</p><br>
+                <p class="color_size">负责整个网站的开发和运营</p>
+                <div class="info">
+                    <div class="circle1"></div>
+                    <div class="info_lco">
+                        <p class="name">李叉叉</p>
+                        <p class="email">邮箱：18dwli@stu.edu.cn</p>
+                    </div>
+                    <div class="circle2"></div>
+                    <div class="info_lco">
+                        <p class="name">轻风小逸</p>
+                        <p class="email">邮箱：18yd@stu.edu.cn</p>
+                    </div>
+                </div>
+                <p class="color_size">由于时间不足、能力不足</p><br>
+                <p class="color_size">我们的网站还存在许多问题</p><br>
+                <p class="color_size">如果您有建议或需要</p><br>
+                <p class="color_size">请在下面填写信息，非常欢迎你的来信！</p>
+                <div class="tablebox">
+                    <div class="changbox">
+                        <div style="text-align: left;">
+                            <p class="tabletitle" style="display: inline-block;" >您的联系方式：<div style="display: inline-block;color: #A6A6A6;   ">我们不会泄露您的个人信息，只是为了在处理完您的建议后能及时与您反馈！</div></p>
+                        </div>
+                        <input class="form-control wid" type="text" value="微信、QQ、邮箱">
+                        <p class="tabletitle">您的建议/问题反馈：</p>
+                        <textarea class="form-control wid" cols="60" rows="5">非常感谢您的填写</textarea>
+                        <button>提交</button>
+                    </div>
+                </div>
+                <div class="bottom"><img src="img/whitetoyou.png" alt="无法加载"></div>
+            </div>
+        </div>
+        <!--js-->
+        <script src="js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $("button").click(function(){
+                    if(isEmpty($("textarea").val())){
+                        alert("没填写就不要交哦！");
+                    }
+            })
+            //查空
+            function isEmpty(str){
+            if(str == null || str.trim() == "" ||str == "非常感谢您的填写"){
+                    return true;
+                }
+                return false;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8" >
+        <!--科学公式引入-->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!--载入BootStrap的css-->
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="../../../img/icon.png">
+        <link href="../../../css/navi.css" rel="stylesheet">
+        <!--css-->
+        <style type="text/css">
+            /*总*/
+            html,body{
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                overflow-y: auto; /*主页隐藏*/
+                overflow-x: auto;
+                text-align: center;
+            }
+            @font-face{
+                font-family: "navFont";
+                src: url("../../../fonts/msyhl.ttc");
+                font-family: "navFontActive";
+                src: url("../../../fonts/msyhbd.ttc");
+            }
+            .tophref{
+                position: relative;
+                top: -500px;
+            }
+            .totop{
+                position: fixed;
+                bottom: 45px;
+                right: 100px;
+                background-color: #D6D6D6;
+                height: 40px;
+                width: 40px;
+                padding-top: 10px;
+            }
+            .totop>img{
+                height: 20px;
+                width: 25px;
+            }
+            .topnav>.nav{
+                right: 1020px;
+            }
+            #leftnav>.nav-pills>li.active>a>img, #leftnav>.nav-pills>li.active>a:focus>img, #leftnav>.nav-pills>li.active>a:hover>img{
+                content: url("../../../img/tomore.png");
+                height: 25px;
+                width: 20px;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="home">
+            <div class="navbox">
+                <ul class="nav nav-pills">
+                    <li><a href="../../../index.html">首页</a></li>
+                    <li class="active"><a href="#">知识点</a></li>
+                    <li><a href="../../../test.html">测试</a></li>
+                    <li><a href="../../../software.html">软件</a></li>
+                    <li><a href="../../../about.html">关于我们</a></li>
+                </ul>
+            </div>
+            <a class="tophref" name="top"></a>
+            <img src="../../../img/kownledgetop.png" alt="无法加载" class="top"></img>
+            <div class="topnavbox">
+                <img id="left" src="../../../img/left.png" alt="无法加载" style="cursor: pointer; visibility:hidden;">
+                <div class="topnav">
+                    <ul class="nav nav-pills">
+                        <li><a href="../1/1.1.html">基础概念和术语<div></div></a></li>
+                        <li><a href="../2/2.1.html">描述分布<div></div></a></li>
+                        <li><a href="../3/3.1.html">用图形呈现分布<div></div></a></li>
+                        <li><a href="../4/4.1.html">概率与概率分布<div></div></a></li>
+                        <li><a href="../5/5.1.html">样本统计量的<br>概率分布<div></div></a></li>
+                        <li><a href="../6/6.1.html">参数估计<div></div></a></li>
+                        <li><a href="../7/7.1.html">假设检验<div></div></a></li>
+                        <li><a href="../8/8.1.html">方差分析<div></div></a></li>
+                        <li><a href="../9/9.1.html">相关分析<div></div></a></li>
+                        <li class="active"><a href="#">一元线性回归<div></div></a></li>
+                        <li><a href="../11/11.1.html">卡方检验<div></div></a></li>
+                        <li><a href="../12/12.1.html">量表的<br>信效度检验<div></div></a></li>
+                        <li><a href="../13/13.1.html">聚类分析<div></div></a></li>
+                    </ul>
+                </div>
+                <img id="right" src="../../../img/right.png" alt="无法加载" style="cursor: pointer; visibility:visible;">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div id="leftnav" class="col-md-3 col-xm-3 col-xs-3">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li class="active"><a style="font-size: 16px;" href="#">一元线性回归估计和检验<img></a></li>
+                            <li><a href="10.2.html">回归直线拟合优度<img></a></li>
+                            <li><a href="10.3.html">回归分析显著性检验<img></a></li>
+                            <li><a href="10.4.html">利用回归方程进行预测<img></a></li>
+                            <li><a href="10.5.html">残差分析<img></a></li>
+                          </ul>
+                    </div>
+                    <div id="rightcontent"class="col-md-9 col-xm-9  col-xs-9">
+                        <p class="head">一元线性回归的估计和检验</p>
+                        <p class="headtext">回归分析（regression analysis）重点考察一个特定的变量（因变量），而把其他变量（自变量）看作影响这一变量的因素，并通过适当的数学模型将变量间的关系表达出来，进而通过一个或几个自变量的取值来预测因变量的取值。</p>
+                        <p class="kind">1.一元线性回归模型</p>
+                        <p>一元线性回归是最简单的回归模型（regression model），它揭示的是一个自变量与一个因变量之间的线性关系可大致表示成如下形式：</p>
+                        <p class="math">\(y = α+βx+ε\)</p>
+                        <p>在回归模型中，\(y\)是\(x\)的线性函数（\(α+β_x\)部分）加上误差项\(ε\)。\(α+β_x\) 反映了由于\(x\)的变化而引起的\(y\)的线性变化；\(ε\) 是被称为误差项的随机变量，反映了除\(x\)和\(y\)之间的线性关系之外的随即因素对y的影响，是不能由\(x\)和\(y\)之间的线性关系所解释的变异。式中\(α\)和\(β\)称为模型的参数。</p>
+                        <p>上式也被称为理论回归模型，有几个主要假定。</p>
+                        <p>●  因变量\(y\)与自变量\(x\)之间具有线性关系。</p>
+                        <p>●  在重复抽样中，自变量\(x\)的取值是固定的，即假定\(x\)是非随机的。</p>
+                        <p>●  误差项\(ε\)具有反差齐性。</p>
+                        <p>●  误差项\(ε\)是一个期望值为0，服从正态分布的随机变量，且误差项\(ε\)间相互独立</p>
+                        <hr>
+
+                        <p></p>
+                        <p class="kind">2.一元线性回归方程 </p>
+                        <p>根据回归模型的假定，\(ε\)的期望值等于0，因此\(y\)的期望值\(E(y) = α+β_x\)，也就是说\(y\)的期望值是\(x\)的线性函数。描述因变量\(y\)的期望值如何依赖于自变量\(x\)的方程称为回归方程（regression equation），一元线性回归方程的形式为：</p>
+                        <p class="math">\(E(y) = α+β_x\)</p>
+                        <p>由于总体回归参数\(α\)和\(β\)是未知的，必须利用样本数据去估计它们。用样本统计量\(α\)和\(β\)代替回归方程中的未知参数\(α\)和\(β\)，这时就得到了估计的回归方程（estimated regression equation）。它是根据样本数据求出的回归方程的估计。对于一元线性回归，估计的回归方程形式为：</p>
+                        <p class="math">\(\hat y = \hat a + \hat β_x\)</p>
+                        <p>上式中\(\hat y\)被叫做\(y\)的预测值或\(y\)的估计值。表示截距，\(\hat α\)是估计的回归直线在\(y\)轴上的截距；\(\hat β\)是直线的斜率，也称为回归系数，它表示\(x\)每变动一个单位时，\(y\)的平均变动量。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom"><img src="../../../img/whitetoyou.png" alt="无法加载"><div>
+            <a href="#top"><div class="totop" style="visibility:hidden;"><img src="../../../img/whitetotop.png" alt="无法加载"  style="visibility:hidden;"></div><a>
+        </div>
+        <!--js-->
+        <script src="../../../js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../../js/know.js"></script>
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>

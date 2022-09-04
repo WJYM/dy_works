@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8" >
+        <!--载入BootStrap的css-->
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="../../../img/icon.png">
+        <link href="../../../css/navi.css" rel="stylesheet">
+        <!--css-->
+        <style type="text/css">
+            /*总*/
+            html,body{
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                overflow-y: auto; /*主页隐藏*/
+                overflow-x: auto;
+                text-align: center;
+            }
+            @font-face{
+                font-family: "navFont";
+                src: url("../../../fonts/msyhl.ttc");
+                font-family: "navFontActive";
+                src: url("../../../fonts/msyhbd.ttc");
+            }
+            .tophref{
+                position: relative;
+                top: -500px;
+            }
+            .totop{
+                position: fixed;
+                bottom: 45px;
+                right: 100px;
+                background-color: #D6D6D6;
+                height: 40px;
+                width: 40px;
+                padding-top: 10px;
+            }
+            .totop>img{
+                height: 20px;
+                width: 25px;
+            }
+            #leftnav>.nav-pills>li.active>a>img, #leftnav>.nav-pills>li.active>a:focus>img, #leftnav>.nav-pills>li.active>a:hover>img{
+                content: url("../../../img/tomore.png");
+                height: 25px;
+                width: 20px;
+                float: right;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="home">
+            <div class="navbox">
+                <ul class="nav nav-pills">
+                    <li><a href="../../../index.html">首页</a></li>
+                    <li class="active"><a href="#">知识点</a></li>
+                    <li><a href="../../../test.html">测试</a></li>
+                    <li><a href="../../../software.html">软件</a></li>
+                    <li><a href="../../../about.html">关于我们</a></li>
+                </ul>
+            </div>
+            <a class="tophref" name="top"></a>
+            <img src="../../../img/kownledgetop.png" alt="无法加载" class="top"></img>
+            <div class="topnavbox">
+                <img id="left" src="../../../img/left.png" alt="无法加载" style="cursor: pointer; visibility:visible;">
+                <div class="topnav">
+                    <ul class="nav nav-pills">
+                        <li class="active"><a href="#">基础概念和术语<div></div></a></li>
+                        <li><a href="../2/2.1.html">描述分布<div></div></a></li>
+                        <li><a href="../3/3.1.html">用图形呈现分布<div></div></a></li>
+                        <li><a href="../4/4.1.html">概率与概率分布<div></div></a></li>
+                        <li><a href="../5/5.1.html">样本统计量的<br>概率分布<div></div></a></li>
+                        <li><a href="../6/6.1.html">参数估计<div></div></a></li>
+                        <li><a href="../7/7.1.html">假设检验<div></div></a></li>
+                        <li><a href="../8/8.1.html">方差分析<div></div></a></li>
+                        <li><a href="../9/9.1.html">相关分析<div></div></a></li>
+                        <li><a href="../10/10.1.html">一元线性回归<div></div></a></li>
+                        <li><a href="../11/11.1.html">卡方检验<div></div></a></li>
+                        <li><a href="../12/12.1.html">量表的<br>信效度检验<div></div></a></li>
+                        <li><a href="../13/13.1.html">聚类分析<div></div></a></li>
+                    </ul>
+                </div>
+                <img id="right" src="../../../img/right.png" alt="无法加载" style="cursor: pointer; visibility:hidden;">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div id="leftnav" class="col-md-3 col-xm-3 col-xs-3">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li class="active"><a href="#">总体<img></a></li>
+                            <li><a href="1.2.html">样本<img></a></li>
+                            <li><a href="1.3.html">个数<img></a></li>
+                            <li><a href="1.4.html">参数<img></a></li>
+                            <li><a href="1.5.html">统计量<img></a></li>
+                            <li><a href="1.6.html">独立性与相关性<img></a></li>
+                            <li><a href="1.7.html">自由度<img></a></li>
+                            <li><a href="1.8.html">频数<img></a></li>
+                            <li><a href="1.9.html">比例<img></a></li>
+                            <li><a href="1.10.html">百分比<img></a></li>
+                            <li><a href="1.11.html">比率<img></a></li>
+                            <li><a href="1.12.html">随机变量<img></a></li>
+                            <li><a href="1.13.html">测量的误差<img></a></li>
+                            <li><a href="1.14.html">测量的精度<img></a></li>
+                          </ul>
+                    </div>
+                    <div id="rightcontent"class="col-md-9 col-xm-9  col-xs-9">
+                        <p class="head">总体  population</p>
+                        <p>总体分为有限总体和无限总体，主要是为了判别抽样中每次抽取是否独立。</p>
+                        <p class="headtext"><b>总体平均数μ、总体标准差σ、总体比率π。</b></p>
+
+                        <p class="head2">1.有限总体-定义<p>
+                        <p>范围能够明确确定且个体的数目有限。</p>
+                        <p class="head3">举例:</p>
+                        <p>要调查汕头大学18级网络与新媒体专业同学的作业完成情况，那么由18级网络与新媒体专业同学构成的总体就是有限总体。</p>
+                        <hr>
+                        <p class="head2">2.无限总体-定义</p>
+                        <p>总体所包括的个体无限、不可数。</p>
+                        <p class="head3">举例:</p>
+                        <p>在汕头大学的某次科学实验中，每次的实验数据可以看做是总体的一个个体，并且因为实验可以无限重复完成，因此收集到的实验数据构成的总体就是无限总体。</p>
+                        <hr>
+                        <p class="kind">区分原因：</p>
+                        <p>主要为了判别在抽样中每次抽取是否独立。对于无限总体，每次抽取总体内的一个个体，并不影响下一次的抽样结果，因此可以看作是独立的；对于有限个体，每抽取一个单位，总体内就会少一个个体，前一次的抽样结果往往会影响第二次的抽样结果，因此每次抽取都是不独立的。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom"><img src="../../../img/whitetoyou.png" alt="无法加载"><div>
+            <a href="#top"><div class="totop" style="visibility:hidden;"><img src="../../../img/whitetotop.png" alt="无法加载"  style="visibility:hidden;"></div><a>
+        </div>
+        <!--js-->
+        <script src="../../../js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../../js/know.js"></script>
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>

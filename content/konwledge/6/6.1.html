@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8" >
+        <!--科学公式引入-->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!--载入BootStrap的css-->
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="../../../img/icon.png">
+        <link href="../../../css/navi.css" rel="stylesheet">
+        <!--css-->
+        <style type="text/css">
+            /*总*/
+            html,body{
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                overflow-y: auto; /*主页隐藏*/
+                overflow-x: auto;
+                text-align: center;
+            }
+            @font-face{
+                font-family: "navFont";
+                src: url("../../../fonts/msyhl.ttc");
+                font-family: "navFontActive";
+                src: url("../../../fonts/msyhbd.ttc");
+            }
+            .tophref{
+                position: relative;
+                top: -500px;
+            }
+            .totop{
+                position: fixed;
+                bottom: 45px;
+                right: 100px;
+                background-color: #D6D6D6;
+                height: 40px;
+                width: 40px;
+                padding-top: 10px;
+            }
+            .totop>img{
+                height: 20px;
+                width: 25px;
+            }
+            #leftnav>.nav-pills>li.active>a>img, #leftnav>.nav-pills>li.active>a:focus>img, #leftnav>.nav-pills>li.active>a:hover>img{
+                content: url("../../../img/tomore.png");
+                height: 25px;
+                width: 20px;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="home">
+            <div class="navbox">
+                <ul class="nav nav-pills">
+                    <li><a href="../../../index.html">首页</a></li>
+                    <li class="active"><a href="#">知识点</a></li>
+                    <li><a href="../../../test.html">测试</a></li>
+                    <li><a href="../../../software.html">软件</a></li>
+                    <li><a href="../../../about.html">关于我们</a></li>
+                </ul>
+            </div>
+            <a class="tophref" name="top"></a>
+            <img src="../../../img/kownledgetop.png" alt="无法加载" class="top"></img>
+            <div class="topnavbox">
+                <img id="left" src="../../../img/left.png" alt="无法加载" style="cursor: pointer; visibility:visible;">
+                <div class="topnav">
+                    <ul class="nav nav-pills">
+                        <li><a href="../1/1.1.html">基础概念和术语<div></div></a></li>
+                        <li><a href="../2/2.1.html">描述分布<div></div></a></li>
+                        <li><a href="../3/3.1.html">用图形呈现分布<div></div></a></li>
+                        <li><a href="../4/4.1.html">概率与概率分布<div></div></a></li>
+                        <li><a href="../5/5.1.html">样本统计量的<br>概率分布<div></div></a></li>
+                        <li class="active"><a href="#">参数估计<div></div></a></li>
+                        <li><a href="../7/7.1.html">假设检验<div></div></a></li>
+                        <li><a href="../8/8.1.html">方差分析<div></div></a></li>
+                        <li><a href="../9/9.1.html">相关分析<div></div></a></li>
+                        <li><a href="../10/10.1.html">一元线性回归<div></div></a></li>
+                        <li><a href="../11/11.1.html">卡方检验<div></div></a></li>
+                        <li><a href="../12/12.1.html">量表的<br>信效度检验<div></div></a></li>
+                        <li><a href="../13/13.1.html">聚类分析<div></div></a></li>
+                    </ul>
+                </div>
+                <img id="right" src="../../../img/right.png" alt="无法加载" style="cursor: pointer; visibility:hidden;">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div id="leftnav" class="col-md-3 col-xm-3 col-xs-3">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li class="active"><a href="#">参数估计的基本原理<img></a></li>
+                            <li><a href="6.2.html">总体平均数的区间估计<img></a></li>
+                            <li><a href="6.3.html">总体比例的区间估计<img></a></li>
+                            <li><a href="6.4.html">总体方差的区间估计<img></a></li>
+                            <li><a href="6.5.html">样本量的确定<img></a></li>
+                          </ul>
+                    </div>
+                    <div id="rightcontent"class="col-md-9 col-xm-9  col-xs-9">
+                        <p class="head">参数估计的基本原理</p>
+                        <p><b>参数估计（parameter estimation）</b>就是用样本统计量去估计总体的参数。在参数估计中，用来估计总体参数的统计量称为<b>估计量（estimator）</b>，根据一个具体的样本计算出来的估计量的数值称为<b>估计值（estimated value）</b>，用\(\hat θ\)表示。</p>
+                        <p class="head2">1.点估计（point estimate）-定义</p>
+                        <p>当总体平均数或总体比例未知时，我们可以直接把样本平均数或样本比例当作它的估计值。由于样本统计量为数轴上的一个点，所以称为“点估计”</p>
+                        <p>理想的点估计至少应具备以下条件：</p>
+                        <p>●  无偏性。一般情况下，样本统计量不会和相应的总体参数完全相同，二者多少都会有一定的差距。但如果用很多个样本进行多次的估计，然后平均，则估计误差会在一定程度上相互抵消或者被平均掉，平均估计误差将会等于0，具有这一特征的统计量就是无偏估计量。</p>
+                        <p>●  一致性。样本容量越大，根据样本计算出的估计值越接近总体参数的真值。</p>
+                        <p>●  有效性。对于某一个待估参数来说，可能有不止一个无偏估计量。对于待估参数的两个无偏估计量\(θ_1\)和\(θ_2\)，若这两个估计量的所有可能结果的方差\(σ_1\)＜\(σ_2\)，那么就称\(θ_1\)是比\(θ_2\)更有效的估计量。</p>
+                        <p>●  充分性。如果一个估计量充分地利用了样本提供的所有与待估参数有关的信息，那么该估计量就被称为是充分估计量。如，样本平均数就是总体平均数的充分估计量，因为样本平均数的计算过程中运用到了样本所有的观察值。</p>
+                        <p class="head3">举例:</p>
+                        <p>在对全校同学每天平均学习时长的调查中，用样本的平均学习时长3h直接作为全校同学平均学习时长的估计值，这就是点估计。</p>
+                        <hr>
+
+                        <p class="head2">2.区间估计（interval estimate）-定义</p>
+                        <p>以抽样分布原理为基础，根据样本资料为总体参数计算出一个可能的取值范围，然后指出总体参数处在该值域的可能性有多大，或我们做出这一估计的正确概率有多大。</p>
+                        <p>区间估计的区间通常由样本统计量加减估计误差得到。以总体均值的区间估计为例，样本均值是已知的，而总体均值是将要估计的。由样本均值的抽样分布可知，当重复抽样或有无限个样本时，样本均值的数学期望值等于总体均值，即\(E(\overline x)=μ\) ，样本均值的标准误差为\(σ\over{\sqrt n}\)，样本均值\(\overline x\)围绕其目标μ呈现近似正态的分布。如果样本均值落在μ的两个标准差范围内，反过来也就是，μ被包括在以\(\overline x\)为中心的左右两个标准差范围之内。</p>
+                        <p class="kind">置信水平</p>
+                        <p>区间估计给出的不是总体参数的一个单一估计量值，而是一个数值区间\((\hat θ_1,\hat θ_2)\)，这个区间被称为<b>置信区间（confidence interval）</b>，\(\hat θ_1\)称为<b>置信区间下限</b>，\(\hat θ_2\)称为<b>置信区间上限</b>。</p>
+                        <p>如果抽取了许多不同的样本，如有100个样本，根据每一个样本构造一个置信区间，这样100个样本可以构造出100个总体参数的置信区间，这些置信区间中有95%的区间包含了总体参数的估值，而5%没有包含。则95%这个值称为<b>置信水平</b>，即置信区间中包含总体参数真值的次数占所有置信区间的比例称为<b>置信水平（confidence level）</b>，也称为<b>置信度</b>或<b>置信系数（confidence coefficient）</b>，表示为\(（1-α）\)，其中，\(a\)称为显著性水平，是总体参数未在区间内的比例，是个小概率，一般区0.01（即1%），0.05（即5%）或是0.1（即10%）三种值，相应的，置信水平\(（1-α）\)分别为99%、95%、90%。可见，置信区间应用了概率的中心概念：在重复抽样许多次的情况下，某事件发生的概率是多少。</p>
+                        <p class="head3">举例:</p>
+                        <p>区间估计案例：假定一次射箭的指标是射中靶心，虽然一次射箭就射中靶心的可能性非常小，但是射中靶子的可能性非常大，将范围缩小在这个靶子上，那么这个区间就非常可能包含射中靶心的这个可能性。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom"><img src="../../../img/whitetoyou.png" alt="无法加载"><div>
+            <a href="#top"><div class="totop" style="visibility:hidden;"><img src="../../../img/whitetotop.png" alt="无法加载"  style="visibility:hidden;"></div><a>
+        </div>
+        <!--js-->
+        <script src="../../../js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../../js/know.js"></script>
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>

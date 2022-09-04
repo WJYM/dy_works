@@ -1,0 +1,157 @@
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8" >
+        <!--科学公式引入-->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!--载入BootStrap的css-->
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="../../../img/icon.png">
+        <link href="../../../css/navi.css" rel="stylesheet">
+        <!--css-->
+        <style type="text/css">
+            /*总*/
+            html,body{
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                overflow-y: auto; /*主页隐藏*/
+                overflow-x: auto;
+                text-align: center;
+            }
+            @font-face{
+                font-family: "navFont";
+                src: url("../../../fonts/msyhl.ttc");
+                font-family: "navFontActive";
+                src: url("../../../fonts/msyhbd.ttc");
+            }
+            .tophref{
+                position: relative;
+                top: -500px;
+            }
+            .totop{
+                position: fixed;
+                bottom: 45px;
+                right: 100px;
+                background-color: #D6D6D6;
+                height: 40px;
+                width: 40px;
+                padding-top: 10px;
+            }
+            .totop>img{
+                height: 20px;
+                width: 25px;
+            }
+            .topnav>.nav{
+                right: 1020px;
+            }
+            #leftnav>.nav-pills>li.active>a>img, #leftnav>.nav-pills>li.active>a:focus>img, #leftnav>.nav-pills>li.active>a:hover>img{
+                content: url("../../../img/tomore.png");
+                height: 25px;
+                width: 20px;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="home">
+            <div class="navbox">
+                <ul class="nav nav-pills">
+                    <li><a href="../../../index.html">首页</a></li>
+                    <li class="active"><a href="#">知识点</a></li>
+                    <li><a href="../../../test.html">测试</a></li>
+                    <li><a href="../../../software.html">软件</a></li>
+                    <li><a href="../../../about.html">关于我们</a></li>
+                </ul>
+            </div>
+            <a class="tophref" name="top"></a>
+            <img src="../../../img/kownledgetop.png" alt="无法加载" class="top"></img>
+            <div class="topnavbox">
+                <img id="left" src="../../../img/left.png" alt="无法加载" style="cursor: pointer; visibility:hidden;">
+                <div class="topnav">
+                    <ul class="nav nav-pills">
+                        <li><a href="../1/1.1.html">基础概念和术语<div></div></a></li>
+                        <li><a href="../2/2.1.html">描述分布<div></div></a></li>
+                        <li><a href="../3/3.1.html">用图形呈现分布<div></div></a></li>
+                        <li><a href="../4/4.1.html">概率与概率分布<div></div></a></li>
+                        <li><a href="../5/5.1.html">样本统计量的<br>概率分布<div></div></a></li>
+                        <li><a href="../6/6.1.html">参数估计<div></div></a></li>
+                        <li><a href="../7/7.1.html">假设检验<div></div></a></li>
+                        <li class="active"><a href="#">方差分析<div></div></a></li>
+                        <li><a href="../9/9.1.html">相关分析<div></div></a></li>
+                        <li><a href="../10/10.1.html">一元线性回归<div></div></a></li>
+                        <li><a href="../11/11.1.html">卡方检验<div></div></a></li>
+                        <li><a href="../12/12.1.html">量表的<br>信效度检验<div></div></a></li>
+                        <li><a href="../13/13.1.html">聚类分析<div></div></a></li>
+                    </ul>
+                </div>
+                <img id="right" src="../../../img/right.png" alt="无法加载" style="cursor: pointer; visibility:visible;">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div id="leftnav" class="col-md-3 col-xm-3 col-xs-3">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li class="active"><a href="#">基本原理<img></a></li>
+                            <li><a href="8.2.html">单因素方差分析<img></a></li>
+                            <li><a href="8.3.html">多重比较<img></a></li>
+                            <li><a href="8.4.html">双因素方差分析<img></a></li>
+                            <li><a href="8.5.html">实验设计<img></a></li>
+                          </ul>
+                    </div>
+                    <div id="rightcontent"class="col-md-9 col-xm-9  col-xs-9">
+                        <p class="head">方差分析<br>（Analysis of Variance）</p>
+                        <p class="head2">1.单因素方差分析（one-way analysis of variance）-定义</p>
+                        <p>单因素方差分析检验两个以上的群体在某个变量上的均值差异。</p>
+                        <p class="kind">1.1 什么类型的问题可运用方差分析来解决</p>
+                        <p>当我们遇到以下情形时，可考虑应用方差分析来解决问题：</p>
+                        <p>●  只考虑一个分类型自变量的影响效果；</p>
+                        <p>●  分组因素有两个以上的水平（处理）；</p>
+                        <p>●  关注不同群体在平均值上的差异。</p>
+                        <p class="kind">1.2 单因素方差分析的步骤</p>
+                        <p>●  提出研究假设和原假设。</p>
+                        <p>●  选择合适的检验统计量并加以计算</p>
+                        <p>（1）F值是组间方差和组内方差的比值。</p>
+                        <p>总平方和\(SST\)，计算公式为：</p>
+                        <p class="math">\(SST={\sum^k_{i=1}}{\sum^{n_i}_{j=1}}{(x_{ij}-\overline x)}^2\)</p>
+                        <p>组间平方和\(SSB\)，计算公式为：</p>
+                        <p class="math">\(SSB={\sum^k_{i=1}}n_i{(\overline{x_i}-\overline x)}^2\)</p>
+                        <p>组内平方和\(SSW\)，计算公式为：</p>
+                        <p class="math">\(SSW={\sum^k_{i=1}}{\sum^{n_i}_{j=1}}{(x_{ij}-\overline {x_i})}^2\)</p>
+                        <p>上式中，\(i\)表示第几组的数据，一共有\(k\)组（水平）数据；\(j\)表示在每个组中第几个数据，该组中一共有\(n_i\)个数据；\(x_{ij}\)表示每个观测值；\(\overline {x_i}\)表示第\(i\)组的所有观测值的平均数；\(\overline x\)表示所有观测值的总体平均数。</p>
+                        <p>（2）由于误差平方和的大小与观测值的数量多少有关，为了消除观测值数量对误差平方和大小的影响，需要将其平均，也就是用各平方和除以它们所对应的自由度，结果称为<b>均方（mean square）</b>，也称<b>方差</b>。三个平方和对应的自由度分别为：</p>
+                        <p>\(SST\)的自由度为\(n-1\)，其中\(N\)为全部观测值的个数。</p>
+                        <p>\(SSB\)的自由度为\(k-1\)，其中\(k\)为因素水平或处理的个数。</p>
+                        <p>\(SSW\)的自由度为\(n-k\)。</p>
+                        <p>（3）由于要比较的是组间均方和组内均方之间的差异，所以通常只计算\(SSB\)的均方和\(SSW\)的均方。\(SSB\)的均方也称为<b>组间均方或组间方差</b>，记为\(MSB\)，\(SSW\)的均方也称为<b>组内均方或组内方差</b>，记为\(MSW\)，计算公式为：</p>
+                        <p class="math">\(MSB = {SSB\over{k-1}}\)</p>
+                        <p class="math">\(MSW = {SSW\over{n-k}}\)</p>
+                        <p>（4）将上述\(MSB\)和\(MSW\)对比，即能得到所需要的检验统计量\(F\)。当\(H_0\)为真时，二者的比值服从分子自由度为\(k-1\)、分母自由度\(n-k\)的\(F\)分布，即：</p>
+                        <p class="math">\(F = {{MSB}\over {MSW}}\)~\(F(k-1,n-k)\)</p>
+                        <p>●  依据研究假设，方差分析应为单尾检验。由\(F\)分布的分子自由度\((df_1)\)和分母自由度\((df_2)\)以及所设定的显著水平，查\(F\)分布表，得出临界值。比较检验统计值和临界值，或看是否\(p＜α\)，如果前者大于后者，可以推翻原假设，接受研究假设，说明检验有显著意义，表明群体之间的差异不是由随即因素引起的，而是由于系统因素造成的；若前者小于后者，则无法拒绝原假设，即没有证据表明群体之间的差异是由系统因素造成的。</p>
+                        <hr>
+
+                        <p class="head2">2.多重比较（multiple comparisons）-定义</p>
+                        <p>多重比较将每一个群体的均值和另一个群体的均值进行比较，然后来看哪里出现差异。具体步骤为：</p>
+                        <p>（1）提出假设：\(H_0：μ_i = μ_j\)</p>
+                        <p style="text-indent: 9em;">\(H_1：μ_i ≠ μ_j\)</p>
+                        <p>（2）计算检验统计量：\(\overline x_i - \overline x_j\)</p>
+                        <p>（3）计算\(LSD\)，公式为：</p>
+                        <p class="math">\(LSD=t_{a\over 2}\sqrt{MSE({1\over {n_i}}+{1\over {n_j}})}\)</p>
+                        <p>上式中：\(t_{a\over 2}\)是\(t\)分布的临界值，通过查\(t\)分布表得到，\(t\)分布的自由度为\((n-k)\)，这里的\(k\)是因素中水平的个数；\(MSE\)为组内方差；\(n_i\)和\(n_j\)分别是第\(i\)个样本和第\(j\)个样本的样本量。</p>
+                        <p>（4）根据显著性水平\(α\)作出决策：如果\(|\overline x_i-\overline x_j|>LSD\)，则拒绝\(H_0\)；</p>
+                        <p style="text-indent: 17em;">如果\(|\overline x_i-\overline x_j|\lt LSD\)，则拒绝\(H_0\)。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom"><img src="../../../img/whitetoyou.png" alt="无法加载"><div>
+            <a href="#top"><div class="totop" style="visibility:hidden;"><img src="../../../img/whitetotop.png" alt="无法加载"  style="visibility:hidden;"></div><a>
+        </div>
+        <!--js-->
+        <script src="../../../js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../../js/know.js"></script>
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>

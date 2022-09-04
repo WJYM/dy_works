@@ -1,0 +1,224 @@
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8" >
+        <!--科学公式引入-->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!--载入BootStrap的css-->
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="../../../img/icon.png">
+        <link href="../../../css/navi.css" rel="stylesheet">
+        <!--css-->
+        <style type="text/css">
+            /*总*/
+            html,body{
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                overflow-y: auto; /*主页隐藏*/
+                overflow-x: auto;
+                text-align: center;
+            }
+            @font-face{
+                font-family: "navFont";
+                src: url("../../../fonts/msyhl.ttc");
+                font-family: "navFontActive";
+                src: url("../../../fonts/msyhbd.ttc");
+            }
+            .tophref{
+                position: relative;
+                top: -500px;
+            }
+            .totop{
+                position: fixed;
+                bottom: 45px;
+                right: 100px;
+                background-color: #D6D6D6;
+                height: 40px;
+                width: 40px;
+                padding-top: 10px;
+            }
+            .totop>img{
+                height: 20px;
+                width: 25px;
+            }
+            #leftnav>.nav-pills>li.active>a>img, #leftnav>.nav-pills>li.active>a:focus>img, #leftnav>.nav-pills>li.active>a:hover>img{
+                content: url("../../../img/tomore.png");
+                height: 25px;
+                width: 20px;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="home">
+            <div class="navbox">
+                <ul class="nav nav-pills">
+                    <li><a href="../../../index.html">首页</a></li>
+                    <li class="active"><a href="#">知识点</a></li>
+                    <li><a href="../../../test.html">测试</a></li>
+                    <li><a href="../../../software.html">软件</a></li>
+                    <li><a href="../../../about.html">关于我们</a></li>
+                </ul>
+            </div>
+            <a class="tophref" name="top"></a>
+            <img src="../../../img/kownledgetop.png" alt="无法加载" class="top"></img>
+            <div class="topnavbox">
+                <img id="left" src="../../../img/left.png" alt="无法加载" style="cursor: pointer; visibility:visible;">
+                <div class="topnav">
+                    <ul class="nav nav-pills">
+                        <li><a href="../1/1.1.html">基础概念和术语<div></div></a></li>
+                        <li class="active"><a href="#">描述分布<div></div></a></li>
+                        <li><a href="../3/3.1.html">用图形呈现分布<div></div></a></li>
+                        <li><a href="../4/4.1.html">概率与概率分布<div></div></a></li>
+                        <li><a href="../5/5.1.html">样本统计量的<br>概率分布<div></div></a></li>
+                        <li><a href="../6/6.1.html">参数估计<div></div></a></li>
+                        <li><a href="../7/7.1.html">假设检验<div></div></a></li>
+                        <li><a href="../8/8.1.html">方差分析<div></div></a></li>
+                        <li><a href="../9/9.1.html">相关分析<div></div></a></li>
+                        <li><a href="../10/10.1.html">一元线性回归<div></div></a></li>
+                        <li><a href="../11/11.1.html">卡方检验<div></div></a></li>
+                        <li><a href="../12/12.1.html">量表的<br>信效度检验<div></div></a></li>
+                        <li><a href="../13/13.1.html">聚类分析<div></div></a></li>
+                    </ul>
+                </div>
+                <img id="right" src="../../../img/right.png" alt="无法加载" style="cursor: pointer; visibility:hidden;">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div id="leftnav" class="col-md-3 col-xm-3 col-xs-3">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="2.1.html">集中趋势的度量<img></a></li>
+                            <li class="active"><a href="#">离散程度的度量<img></a></li>
+                            <li><a href="2.3.html">分布的形状<img></a></li>
+                          </ul>
+                    </div>
+                    <div id="rightcontent"class="col-md-9 col-xm-9  col-xs-9">
+                        <p class="head">离散程度的度量</p>
+
+                        <p class="head2">1.异众比率（variation ratio）-定义</p>
+                        <p>指非众数组的频数占总频数的比例，用\(V_r\)表示。异众比率用于衡量众数对一组数据的代表程度，值越大说明非众数组的频数占总频率的比重越大，众数的代表性就越差。</p>
+                        <p>计算公式为：</p>
+                        <p class="math">\(V_r={{\sum f_i-f_m}\over \sum f_i}=1-{f_m\over\sum f_i}\)</p>
+                        <p>其中，\(\sum f_i\)为变量值的总频数，\(f_m\)为众数组的频数。</p>
+                        <p class="head3">举例:</p>
+                        <hr>
+                        
+                        <p class="head2">2.四分位差（quartile deviation）-定义</p>
+                        <p>也称为内距或四分间距，是上四分位数与下四分位数之差，用\(Q_d\)表示。</p>
+                        <p>计算公式为：</p>
+                        <p class="math">\(Q_d=Q_m-Q_l\)</p>
+                        <p>当数据分布有偏时，四分位差能快速大致地查看数据分布情况。</p>
+                        <p class="head3">举例:</p>
+                        <hr>
+                        
+                        <p class="head2">3.极差（range）-定义</p>
+                        <p>是数值型数据中最简单、最直接的离散度量，是最大值与最小值之差。</p>
+                        <p>计算公式为：</p>
+                        <p class="math">\(R = max(x_i)-min(x_i)\)</p>
+                        <p>但极差在使用上很受限制。如果数据中存在一个异常值，极差反映的离散程度可能就非常大，实际上，除去这一异常值后，分布可能非常集中。</p>
+                        <p class="head3">举例:</p>
+                        <hr>
+                        
+                        <p class="head2">4.平均差（mean deviation）-定义</p>
+                        <p>指一组数据中各个数值与平均数之差的平均，即用数值离开平均数的距离来表示离散程度，用\(M_d\)表示。</p>
+                        <p>计算公式为：</p>
+                        <p class="math">\(M_d={\sum_{i=1}^n|x_i-\overline x| \over n}\)</p>
+                        <p>平均差以平均数为中心，反映每个数据与平均数的差异程度，可以全面反映一组数据的离散状况。</p>
+                        <p class="head3">举例:</p>
+                        <hr>
+                        
+                        <p class="head2">5.方差（variance/deviation Var）-定义</p>
+                        <p>是度量离散程度最常用的测量值之一，反映了各变量值与均值的平均差异。</p>
+                        <p>根据总体数据计算的，称为总体方差，记为\(σ^2\)；根据样本数据计算的，称为样本方差，记为\(s^2\)。</p>
+                        <p>与平均差一样，方差也是用各数据与平均数的平均距离来表示离散程度。方差越大，表示数据中的数值之间差异越大，分布越分散。要算出\(n\)个数据的方差，步骤如下：</p>
+                        <P>●  第1步：找出每个数据与平均数的距离（做减法），并把这个距离平方；</P>
+                        <p>●  第2步：把所有的距离平方加起来，并除以\(n-1\)。所得到的距离平方的“平均”即为方差（\(s^2\)）。</p>
+                        <p>计算公式为：</p>
+                        <p class="math">\(s^2={{\sum^n_{i=1}(x_i-\overline x)}\over n-1}\)</p>
+                        <p class="head3">举例:</p>
+                        <hr>
+                        
+                        <p class="head2">6.标准差（standard deviation）-定义</p>
+                        <p>是度量离散程度最常用的测量值之一，反映了各变量值与均值的平均差异。</p>
+                        <p>根据总体数据计算的，称为总体标准差，记为\(σ\)；根据样本数据计算的，称为样本标准差，记为\(s\)。</p>
+                        <p>与平均差一样，标准差也是用各数据与平均数的平均距离来表示离散程度。标准差越大，表示数据中的数值之间差异越大，分布越分散。要算出\(n\)个数据的标准差，步骤如下：</p>
+                        <p>●  第1步：找出每个数据与平均数的距离（做减法），并把这个距离平方；</p>
+                        <p>●  第2步：把所有的距离平方加起来，并除以\(n-1\)。所得到的距离平方的“平均”即为方差（\(s^2\)）。</p>
+                        <p>第3步：把方差取平方根，得到标准差（\(s\)）。</p>
+                        <p>计算公式为：</p>
+                        <p class="math">\(s=\sqrt{{\sum^n_{i=1}(x_i-\overline x)}\over n-1}\)</p>
+                        <p class="head3">举例:</p>
+                        <hr>
+                        
+                        <p class="head2">7.相对位置的度量：标准分数（standard score）-定义</p>
+                        <p>我们可以参照一组数据的典型值（一般为平均值）来确定某一数据在该组数据的位置，计算这个数值离开平均值多少个标准差单位。这种变量值与平均值的离差除以标准差后的值称为<b>标准分数或\(Z\)分数</b>，通常用\(Z\)表示。公式如下：</p>
+                        <p class="math">\(Z={{x_i-\overline x}\over s}\)</p>
+                        <p>上式中，\(x_i\)表示原始数值，\(\overline x\)表示平均值，\(s\)是标准差。</p>
+                        <p class="head3">举例:</p>
+                        <hr>
+                        
+                        <p class="head2">8.离散系数（coefficient of variation）-定义</p>
+                        <p>当我们比较的两组或多组数据的平均值或者其计量单位不一致时，需采用标准差与平均数的比值来进行判定其离散程度。标准差与其相应的平均数之比即离散系数，也称为变异系数，计算公式为：</p>
+                        <p class="math">\(v={s\over \overline x}\)</p>
+                        <p class="head3">举例:</p>
+                        <hr>
+                        
+                        <p class="kind">9.各离散量数的特征比较及应用情况分析</p>
+                        <table class="table table-bordered">
+                            <tr>
+                                <td style="width: 20%;text-align: center;"><b>度量指标</b></td>
+                                <td style="text-align: center;"><b>适用情况</b></td>
+                                <td style="text-align: center;"><b>注意事项</b></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">异众比率</td>
+                                <td>适用于分类数据</td>
+                                <td>是非众数组的频数占总频数的比例；值越小，众数的代表性越强</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">四分位差</td>
+                                <td>对顺序数据和数值型数据适用；对了解中间50%数值的分布有用</td>
+                                <td>是上四分位数与下四分位数之差；不受极端值和分布偏斜的影响</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">极差</td>
+                                <td>适用于数值型数据；容易计算</td>
+                                <td>是最大值与最小值之差，反映着数据分散大小；包含信息很少，可能产生误导</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">平均差</td>
+                                <td>适用于数值型数据</td>
+                                <td>用数值离开平均数的距离来表示离散程度；考虑了每个数值，较为稳定；带有绝对值，不易计算</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">标准差</td>
+                                <td>数值型数据最常用到的离散量数</td>
+                                <td>用数据与平均数的平均数的平均距离来表示离散程度；标准差越大，表示数据中的数值之间差异越大，分布越分散；易受极端值的影响</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">标准分数</td>
+                                <td>在单位不一致、标准不统一的情况下，比较数据的相对位置；可用于判断一组数据是否有离群点；用于对变量的标准化处理</td>
+                                <td>是离开平均数的“标准差单位数”；标准分数的分布是标准化正态分布，平均数为0，标准差为1</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">离散系数</td>
+                                <td>对不同组别数据离散程度的比较</td>
+                                <td>是标准差与其相应的均值之比；消除了数据水平高低和计量单位的影响</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom"><img src="../../../img/whitetoyou.png" alt="无法加载"><div>
+            <a href="#top"><div class="totop" style="visibility:hidden;"><img src="../../../img/whitetotop.png" alt="无法加载"  style="visibility:hidden;"></div><a>
+        </div>
+        <!--js-->
+        <script src="../../../js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../../js/know.js"></script>
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>

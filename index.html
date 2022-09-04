@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>统优-传播统计学入门学习网站</title>
+        <meta charset="UTF-8" >
+        <!--载入BootStrap的css-->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="img/icon.png">
+        <link href="css/navi.css" rel="stylesheet">
+        <!--css-->
+        <style type="text/css">
+            /*总*/
+            html,body{
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                text-align: center;
+                overflow-y: auto; /*主页隐藏*/
+            }
+            @font-face{
+                font-family: "navFont";
+                src: url("fonts/msyhl.ttc");
+                font-family: "navFontActive";
+                src: url("fonts/msyhbd.ttc");
+            }
+            #wheelbox>div>img,#wheelbox>div>a>img{
+                width: 100%;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="home">
+            <div class="navbox">
+                <ul class="nav nav-pills">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li><a href="konwledge.html">知识点</a></li>
+                    <li><a href="test.html">测试</a></li>
+                    <li><a href="software.html">软件</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                </ul>
+            </div>
+            <div id="wheelbox">
+                <!--首页-->
+                <div>
+                    <img src="img/toyou.png" alt="无法加载" style="margin: 110px 0 90px 0;">
+                </div>
+                <!--知识点-->
+                <div>
+                    <a href="konwledge.html"><img src="img/knowledge.jpg" alt="无法加载"></a>
+                </div>
+                <!--测试-->
+                <div>
+                    <a href="test.html"><img src="img/test.jpg" alt="无法加载"></a>
+                </div>
+                <!--软件-->
+                <div>
+                    <a href="software.html"><img src="img/software.jpg" alt="无法加载"></a>
+                </div>
+                <!--关于我们-->
+                <div>
+                    <a href="about.html"><img src="img/about.jpg" alt="无法加载"></a>
+                </div>
+            </div>
+            <div class="bottom"><img src="img/whitetoyou.png" alt="无法加载"><div></div>
+        </div>
+        <!--js-->
+        <script src="js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            
+        </script>
+    </body>
+</html>

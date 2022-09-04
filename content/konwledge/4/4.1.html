@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8" >
+         <!--科学公式引入-->
+         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!--载入BootStrap的css-->
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="../../../img/icon.png">
+        <link href="../../../css/navi.css" rel="stylesheet">
+        <!--css-->
+        <style type="text/css">
+            /*总*/
+            html,body{
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                overflow-y: auto; /*主页隐藏*/
+                overflow-x: auto;
+                text-align: center;
+            }
+            @font-face{
+                font-family: "navFont";
+                src: url("../../../fonts/msyhl.ttc");
+                font-family: "navFontActive";
+                src: url("../../../fonts/msyhbd.ttc");
+            }
+            .tophref{
+                position: relative;
+                top: -500px;
+            }
+            .totop{
+                position: fixed;
+                bottom: 45px;
+                right: 100px;
+                background-color: #D6D6D6;
+                height: 40px;
+                width: 40px;
+                padding-top: 10px;
+            }
+            .totop>img{
+                height: 20px;
+                width: 25px;
+            }
+            #leftnav>.nav-pills>li.active>a>img, #leftnav>.nav-pills>li.active>a:focus>img, #leftnav>.nav-pills>li.active>a:hover>img{
+                content: url("../../../img/tomore.png");
+                height: 25px;
+                width: 20px;
+                float: right;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="home">
+            <div class="navbox">
+                <ul class="nav nav-pills">
+                    <li><a href="../../../index.html">首页</a></li>
+                    <li class="active"><a href="#">知识点</a></li>
+                    <li><a href="../../../test.html">测试</a></li>
+                    <li><a href="../../../software.html">软件</a></li>
+                    <li><a href="../../../about.html">关于我们</a></li>
+                </ul>
+            </div>
+            <a class="tophref" name="top"></a>
+            <img src="../../../img/kownledgetop.png" alt="无法加载" class="top"></img>
+            <div class="topnavbox">
+                <img id="left" src="../../../img/left.png" alt="无法加载" style="cursor: pointer; visibility:visible;">
+                <div class="topnav">
+                    <ul class="nav nav-pills">
+                        <li><a href="../1/1.1.html">基础概念和术语<div></div></a></li>
+                        <li><a href="../2/2.1.html">描述分布<div></div></a></li>
+                        <li><a href="../3/3.1.html">用图形呈现分布<div></div></a></li>
+                        <li class="active"><a href="#">概率与概率分布<div></div></a></li>
+                        <li><a href="../5/5.1.html">样本统计量的<br>概率分布<div></div></a></li>
+                        <li><a href="../6/6.1.html">参数估计<div></div></a></li>
+                        <li><a href="../7/7.1.html">假设检验<div></div></a></li>
+                        <li><a href="../8/8.1.html">方差分析<div></div></a></li>
+                        <li><a href="../9/9.1.html">相关分析<div></div></a></li>
+                        <li><a href="../10/10.1.html">一元线性回归<div></div></a></li>
+                        <li><a href="../11/11.1.html">卡方检验<div></div></a></li>
+                        <li><a href="../12/12.1.html">量表的<br>信效度检验<div></div></a></li>
+                        <li><a href="../13/13.1.html">聚类分析<div></div></a></li>
+                    </ul>
+                </div>
+                <img id="right" src="../../../img/right.png" alt="无法加载" style="cursor: pointer; visibility:hidden;">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div id="leftnav" class="col-md-3 col-xm-3 col-xs-3">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li class="active"><a href="#">度量事件发生的可能性<img></a></li>
+                            <li><a href="4.2.html">离散型变量的概率分布<img></a></li>
+                            <li><a href="4.3.html">连续型变量的概率分布<img></a></li>
+                            <li><a href="4.4.html" style="font-size: 16px;">由正态分布导出的重要分布<img></a></li>
+                          </ul>
+                    </div>
+                    <div id="rightcontent"class="col-md-9 col-xm-9  col-xs-9">
+                        <p class="head">度量事件发生的可能性</p>
+                        <p>在研究过程中，通常会选取部分样本进行研究，进而推断所有研究对象的情况。进行这种推断时，我们不仅要指出总体可能，而且还要清楚我们进行这种推断有多大的把握——总体出现这种情况的可能性多大，即概率。</p>
+                        <p>概率是对事件发生的可能性大小的度量，事件\(A\)发生的概率记作\(P（A）\)，其价值介于0和1之间，即\(0 ≤ P（A）≤ 1\)，显然，事件\(A\)可能出现，也可能不出现，我们通常称之为<b>“随机事件”</b>。</p>
+                        <p>概率可通过重复试验获得。在相同条件下随机试验\(n\)次，某事件\(A\)出现\(m\)次\(（m ≤ n）\)那么比值\(m\over n\)称为事件\(A\)发生的频率。随着实验次数\(n\)的增大，频率围绕某一常数\(p\)上下波动，且波动的幅度逐渐减小并趋于稳定，这个频率的稳定值即为该事件的概率，记为\(P（A）= {事件A发生的次数\over重复试验次数} = {m\over n} = p\)</p>
+                        <p>要注意的是，<b>频率</b>与<b>概率</b>是两个不同的概念。<b>频率</b>是事件实际发生的次数比率，<b>概率</b>则是事件发生的可能性大小，并非实际观察到的结果，与是否进行试验并没有关系。频率与概率虽然有本质上的不同，但也存在一定的关联。频率的波动往往围绕着概率发生，试验或观察次数越多，频率越接近概率。因此，在实际研究中，在概率未知的情况下，可以利用大数量的\(n\)次观察，以时间的频率去接近概率，从而把握事件的概率。</p>
+                        <p class="head3">举例:</p>
+                        <p>汕大网新班共有50名同学，其中男生有30名，女生有20名。采用完全随机抽样的方法从中抽取学生，那么每次抽到男生的概率是\(2\over 5\)，这是一个确定的值，与实际抽取的结果无关。但是我们在抽样时抽到男生的频率可能为\(3\over 5\)或者\(3\over 10\)，即不一定与概率完全符合，这不影响事先既定的男生被抽到的概率。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom"><img src="../../../img/whitetoyou.png" alt="无法加载"><div>
+            <a href="#top"><div class="totop" style="visibility:hidden;"><img src="../../../img/whitetotop.png" alt="无法加载"  style="visibility:hidden;"></div><a>
+        </div>
+        <!--js-->
+        <script src="../../../js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../../js/know.js"></script>
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>

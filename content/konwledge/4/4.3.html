@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8" >
+         <!--科学公式引入-->
+         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!--载入BootStrap的css-->
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="../../../img/icon.png">
+        <link href="../../../css/navi.css" rel="stylesheet">
+        <!--css-->
+        <style type="text/css">
+            /*总*/
+            html,body{
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                overflow-y: auto; /*主页隐藏*/
+                overflow-x: auto;
+                text-align: center;
+            }
+            @font-face{
+                font-family: "navFont";
+                src: url("../../../fonts/msyhl.ttc");
+                font-family: "navFontActive";
+                src: url("../../../fonts/msyhbd.ttc");
+            }
+            .tophref{
+                position: relative;
+                top: -500px;
+            }
+            .totop{
+                position: fixed;
+                bottom: 45px;
+                right: 100px;
+                background-color: #D6D6D6;
+                height: 40px;
+                width: 40px;
+                padding-top: 10px;
+            }
+            .totop>img{
+                height: 20px;
+                width: 25px;
+            }
+            #leftnav>.nav-pills>li.active>a>img, #leftnav>.nav-pills>li.active>a:focus>img, #leftnav>.nav-pills>li.active>a:hover>img{
+                content: url("../../../img/tomore.png");
+                height: 25px;
+                width: 20px;
+                float: right;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="home">
+            <div class="navbox">
+                <ul class="nav nav-pills">
+                    <li><a href="../../../index.html">首页</a></li>
+                    <li class="active"><a href="#">知识点</a></li>
+                    <li><a href="../../../test.html">测试</a></li>
+                    <li><a href="../../../software.html">软件</a></li>
+                    <li><a href="../../../about.html">关于我们</a></li>
+                </ul>
+            </div>
+            <a class="tophref" name="top"></a>
+            <img src="../../../img/kownledgetop.png" alt="无法加载" class="top"></img>
+            <div class="topnavbox">
+                <img id="left" src="../../../img/left.png" alt="无法加载" style="cursor: pointer; visibility:visible;">
+                <div class="topnav">
+                    <ul class="nav nav-pills">
+                        <li><a href="../1/1.1.html">基础概念和术语<div></div></a></li>
+                        <li><a href="../2/2.1.html">描述分布<div></div></a></li>
+                        <li><a href="../3/3.1.html">用图形呈现分布<div></div></a></li>
+                        <li class="active"><a href="#">概率与概率分布<div></div></a></li>
+                        <li><a href="../5/5.1.html">样本统计量的<br>概率分布<div></div></a></li>
+                        <li><a href="../6/6.1.html">参数估计<div></div></a></li>
+                        <li><a href="../7/7.1.html">假设检验<div></div></a></li>
+                        <li><a href="../8/8.1.html">方差分析<div></div></a></li>
+                        <li><a href="../9/9.1.html">相关分析<div></div></a></li>
+                        <li><a href="../10/10.1.html">一元线性回归<div></div></a></li>
+                        <li><a href="../11/11.1.html">卡方检验<div></div></a></li>
+                        <li><a href="../12/12.1.html">量表的<br>信效度检验<div></div></a></li>
+                        <li><a href="../13/13.1.html">聚类分析<div></div></a></li>
+                    </ul>
+                </div>
+                <img id="right" src="../../../img/right.png" alt="无法加载" style="cursor: pointer; visibility:hidden;">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div id="leftnav" class="col-md-3 col-xm-3 col-xs-3">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="4.1.html">度量事件发生的可能性<img></a></li>
+                            <li><a href="4.2.html">离散型变量的概率分布<img></a></li>
+                            <li class="active"><a href="#">连续型变量的概率分布<img></a></li>
+                            <li><a href="4.4.html" style="font-size: 16px;">由正态分布导出的重要分布<img></a></li>
+                          </ul>
+                    </div>
+                    <div id="rightcontent"class="col-md-9 col-xm-9  col-xs-9">
+                        <p class="head">连续型变量的概率分布</p>
+                        <p>由于连续型随即变量可以取某一区间或整个数轴上的任意一个值，所以引入概率密度函数的概念来描述连续型变量的概率分布。</p>
+                        <p>如果随机变量X的分布函数\(f(x)\)的曲线与X轴围成的面积等于1，则称曲线\(f(x)\)为连续变量X的概率密度函数，简称密度函数。\(X\)取值在\([a，b]\)区间的概率就是\([a，b]\)区间内曲线\(f(x)\)与\(x\)轴围成的面积。</p>
+                        <p class="headtext">讨论连续随机变量的概率时，指变量x在某个确定的取值范围内的概率，而不是某个点上的概率，\(f(x)\)代表的不是概率本身，二是随机变量取值在点\(x\)处分布的密集程度。</p>
+                        <p class="head2">1.正态分布曲线及其基本特征</p>
+                        <p>正态分布（normal distribution）也称为常态分布或常态分配，其密度函数曲线呈现“两头低、中间高、左右对称”的钟型特征。</p>
+                        <p>正态曲线表示均值、中位数和众数相等的数值分布。正态分布曲线没有偏度，它只有一个波峰，波峰处于正中间。</p>
+                        <p>正态曲线以均值为中心完全对称。沿着中心线将曲线对折，两边会完全重叠。两边是相等的，曲线的一半是另一半的镜像。</p>
+                        <p>正态曲线的双尾是渐近的，曲线的双尾越来越接近横轴，但永远不会与横轴相交。</p>
+                        <p>正态分布曲线的函数形式可表示为：</p>
+                        <p class="math">\(f(x)={{1\over{σ\sqrt{2π}}}e^{-({1\over 2})({{x-μ}\over σ})}}\) \(（-∞\lt x\lt+∞）\)</p>
+                        <p>上式中，\(f(x)\)= 随机变量X的概率密度函数；\(μ\) = 正态随机变量\(X\)的均值；\(σ\) = 正态随机变量\(X\)的标准差；\(π\) = 圆周率3.1415926；\(e\) = 自然对数的底，是一个常数，约为2.71828；\(x\) = 随机变量的取值\(（-∞\lt x \lt +∞）\)。</p>
+                        <p>可见，正态分布的形态是由平均数\(μ\)和方差\(σ^2\) 决定的，常记作\(X\)~\(N(μ,σ^2 )\)。</p>
+                        <p class="kind">正态分布函数具有以下性质：</p>
+                        <p>●  图形是关于\(x = μ\)对称的钟形曲线，且峰值在\(x = μ\)处。</p>
+                        <p>●  均值\(μ\)和标准差\(σ\)一旦确定，分布的具体形式也唯一确定，不同参数的正态分布构成完整的“正态分布族”。</p>
+                        <p>●  均值μ可取实数轴上的任意数值，决定正态曲线的具体位置；标准差\(σ\)决定曲线的“陡峭”或“扁平”程度。\(σ\)越大，正态曲线越扁平，散布的范围越大；\(σ\)越小，正态曲线越陡峭，散布的范围越小。所以，变动正态分布的平均数并不会改变曲线的形状，只会改变曲线在\(x\)轴上的位置。但是，变动标准差却会改变正态曲线的形状。</p>
+                        <p>●  当\(X\)的取值向横轴左右两个方向无限延伸时，曲线的两个尾端也无限渐近横轴，理论上永远不会与之相交。</p>
+                        <p>●  正态随机变量在特定区间上的取值概率由正态曲线下的面积给出，且其曲线下的总面积等于1。</p>
+                        <p><b>对于正态分布曲线，标准差是非常重要的度量单位。在任何正态分布当中，都呈现下列规律：</b></p>
+                        <p>●  68%的观测值，落在距平均数一个标准差的范围内。</p>
+                        <p>●  95%的观测值，落在距平均数两个标准差的范围内。</p>
+                        <p>●  99.7%的观测值，落在距平均数三个标准差的范围内。</p>
+                        <hr>
+
+                        <p class="head2">2.标准正态分布</p>
+                        <p>正态分布的标准形式称为标准正态分布，它是一列分数的分布，因而也简称分布。标准正态分布是平均数\(μ = 0\)，标准差\(σ = 1\)的随机变量的概率分布，记作\(N(0,1)\)。借助分数的思想，将原始分数转换成标准分数。任何一个一般的正态分布\(X\)~\(N\)\((μ,σ^2)\)，都可以通过下面的线性变换公式转化为标准正态分布：</p>
+                        <p class="math">\(Z={{X-μ}\over μ}\)~\(N(0,1)\)</p>
+                        <p>我们可以将原始数据变换为\(Z\)值，将均值和标准差的分布变换成均值为0、方差为1的标准正态分布。标准正态分布的概率密度函数为：</p>
+                        <p class="math">\(φ(x)={1\over{\sqrt{2π}}}e^{-{x^2\over2}}（-∞\lt x\lt +∞）\)</p>
+                        <p>标准正态分布的分布函数为：</p>
+                        <p class="math">\(φ(x)=\int^x_{-∞}φ(t)dt=\int^x_{-∞}{1\over{\sqrt{2π}}}e^{-{x^2\over2}}dt\)</p>
+                        <p>要计算概率时，常常会用到正态分布表。对于服从正态分布的变量\(X\)，需要先通过\(Z = {(X- μ)\overσ}\) 将\(X\)转化为\(Z\)值后，才能查表。</p>
+                        <p class="head3">举例:</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom"><img src="../../../img/whitetoyou.png" alt="无法加载"><div>
+            <a href="#top"><div class="totop" style="visibility:hidden;"><img src="../../../img/whitetotop.png" alt="无法加载"  style="visibility:hidden;"></div><a>
+        </div>
+        <!--js-->
+        <script src="../../../js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../../js/know.js"></script>
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>

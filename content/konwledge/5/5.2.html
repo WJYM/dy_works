@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8" >
+        <!--科学公式引入-->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!--载入BootStrap的css-->
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="../../../img/icon.png">
+        <link href="../../../css/navi.css" rel="stylesheet">
+        <!--css-->
+        <style type="text/css">
+            /*总*/
+            html,body{
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                overflow-y: auto; /*主页隐藏*/
+                overflow-x: auto;
+                text-align: center;
+            }
+            @font-face{
+                font-family: "navFont";
+                src: url("../../../fonts/msyhl.ttc");
+                font-family: "navFontActive";
+                src: url("../../../fonts/msyhbd.ttc");
+            }
+            .tophref{
+                position: relative;
+                top: -500px;
+            }
+            .totop{
+                position: fixed;
+                bottom: 45px;
+                right: 100px;
+                background-color: #D6D6D6;
+                height: 40px;
+                width: 40px;
+                padding-top: 10px;
+            }
+            .totop>img{
+                height: 20px;
+                width: 25px;
+            }
+            #leftnav>.nav-pills>li.active>a>img, #leftnav>.nav-pills>li.active>a:focus>img, #leftnav>.nav-pills>li.active>a:hover>img{
+                content: url("../../../img/tomore.png");
+                height: 25px;
+                width: 20px;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="home">
+            <div class="navbox">
+                <ul class="nav nav-pills">
+                    <li><a href="../../../index.html">首页</a></li>
+                    <li class="active"><a href="#">知识点</a></li>
+                    <li><a href="../../../test.html">测试</a></li>
+                    <li><a href="../../../software.html">软件</a></li>
+                    <li><a href="../../../about.html">关于我们</a></li>
+                </ul>
+            </div>
+            <a class="tophref" name="top"></a>
+            <img src="../../../img/kownledgetop.png" alt="无法加载" class="top"></img>
+            <div class="topnavbox">
+                <img id="left" src="../../../img/left.png" alt="无法加载" style="cursor: pointer; visibility:visible;">
+                <div class="topnav">
+                    <ul class="nav nav-pills">
+                        <li><a href="../1/1.1.html">基础概念和术语<div></div></a></li>
+                        <li><a href="../2/2.1.html">描述分布<div></div></a></li>
+                        <li><a href="../3/3.1.html">用图形呈现分布<div></div></a></li>
+                        <li><a href="../4/4.1.html">概率与概率分布<div></div></a></li>
+                        <li class="active"><a href="#">样本统计量的<br>概率分布<div></div></a></li>
+                        <li><a href="../6/6.1.html">参数估计<div></div></a></li>
+                        <li><a href="../7/7.1.html">假设检验<div></div></a></li>
+                        <li><a href="../8/8.1.html">方差分析<div></div></a></li>
+                        <li><a href="../9/9.1.html">相关分析<div></div></a></li>
+                        <li><a href="../10/10.1.html">一元线性回归<div></div></a></li>
+                        <li><a href="../11/11.1.html">卡方检验<div></div></a></li>
+                        <li><a href="../12/12.1.html">量表的<br>信效度检验<div></div></a></li>
+                        <li><a href="../13/13.1.html">聚类分析<div></div></a></li>
+                    </ul>
+                </div>
+                <img id="right" src="../../../img/right.png" alt="无法加载" style="cursor: pointer; visibility:hidden;">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div id="leftnav" class="col-md-3 col-xm-3 col-xs-3">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="5.1.html">样本统计量及其分布<img></a></li>
+                            <li class="active"><a href="#">样本平均数的抽样分布<img></a></li>
+                            <li><a href="5.3.html">样本比例的抽样分布<img></a></li>
+                          </ul>
+                    </div>
+                    <div id="rightcontent"class="col-md-9 col-xm-9  col-xs-9">
+                        <p class="head">样本平均数的抽样分布</p>
+                        <p>从一个变量总体中随机抽取一个含有\(n\)个观测值的样本（记作\(S_1\)），计算出样本平均数，记作\(\overline{x_1}\) ，然后把所抽取的个案再放回总体。按照相同的方法再抽取\(S_2\)，得到样本平均数\(\overline{x_2}\) ，......，不断重复地进行这样地抽样和计算，就可以得到无数个容量为\(n\)的样本及其平均数，将这些样本平均数统一记作\(\overline{x_i}\)，它们组成新的数据整体，即<b>样本平均数的抽样分布</b>。</p>
+                        <p class="kind">特征</p>
+                        <p>●  样本均值\(x\) ̅有时候大于总体均值\(μ\)，有时候小于总体均值，但平均来说\(x\)趋向该目标，样本\(\overline x\)的期望（平均值）正好等于总体平均值。抽样分布的中心\(μ_x\)等于原总体的中心\(μ\)，即\(μ_x\)=\(μ\)。</p>
+                        <p>●  抽样分布的方差与原总体的方差之间的关系为：\(σ^2_x={σ^2\over n}\)</p>
+                        <p>●  当总体为正态分布时，其样本均值的抽样分布也是正态分布；即使总体分布为非正态分布，随着样本量的增加，样本均值的抽样分布也会近似地变为对称和正态。</p>
+                        <p class="head2">中心极限定理（central limit theorem）-定义</p>
+                        <p>设均值为\(μ\)、方差为\(σ^2\)的任意一个有限总体中抽取样本量为\(n\)的样本，当\(n\)充分大时，样本均值\(\overline x\)的抽样分布近似服从均值为\(μ\)，方差为\(σ^2\over n\)的正态分布。中心极限定理依据具体情况，可以表现为一下几种情形：</p>
+                        <p>●  当总体服从正态分布\(N(μ,σ^2)\)时，来自该总体的容量为\(n\)的所有样本的均值\(\overline x\)也服从正态分布，\(\overline x\)的期望值为\(μ\)，方差为\(σ^2\over n\)。即\(\overline x\)～\(N(μ，{σ^2\over n})\)</p>
+                        <p>●  总体服从正态分布\(N(μ,σ^2)\)，当方差\(σ^2\)未知时，有两种情况：</p>
+                        <p style="text-indent: 4em;">◼  对于大样本\(（n≧30）\)，抽样分布为正态分布；</p>
+                        <p style="text-indent: 4em;">◼  对于小样本\(（n＜30）\)，抽样分布为\(t\)分布。\(t\)分布的自由度为\(n-1\)；均值\(\overline x\)的期望值为\(μ\)，方差为\({s^2}\over n\)。</p>
+                        <p>●  从均值为\(μ\)，方差为\(σ^2\)的一个任意总体中抽取容量为\(n\)的样本，当\(n\)充分大时（通常\(n≧30）\)，样本均值的抽样分布近似服从均值\(μ\)、方差\({σ^2}\over n\)的正态分布。</p>
+                        <p class="head3">举例:</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom"><img src="../../../img/whitetoyou.png" alt="无法加载"><div>
+            <a href="#top"><div class="totop" style="visibility:hidden;"><img src="../../../img/whitetotop.png" alt="无法加载"  style="visibility:hidden;"></div><a>
+        </div>
+        <!--js-->
+        <script src="../../../js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../../js/know.js"></script>
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>

@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8" >
+        <!--科学公式引入-->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!--载入BootStrap的css-->
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="../../../img/icon.png">
+        <link href="../../../css/navi.css" rel="stylesheet">
+        <!--css-->
+        <style type="text/css">
+            /*总*/
+            html,body{
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                overflow-y: auto; /*主页隐藏*/
+                overflow-x: auto;
+                text-align: center;
+            }
+            @font-face{
+                font-family: "navFont";
+                src: url("../../../fonts/msyhl.ttc");
+                font-family: "navFontActive";
+                src: url("../../../fonts/msyhbd.ttc");
+            }
+            .tophref{
+                position: relative;
+                top: -500px;
+            }
+            .totop{
+                position: fixed;
+                bottom: 45px;
+                right: 100px;
+                background-color: #D6D6D6;
+                height: 40px;
+                width: 40px;
+                padding-top: 10px;
+            }
+            .totop>img{
+                height: 20px;
+                width: 25px;
+            }
+            #leftnav>.nav-pills>li.active>a>img, #leftnav>.nav-pills>li.active>a:focus>img, #leftnav>.nav-pills>li.active>a:hover>img{
+                content: url("../../../img/tomore.png");
+                height: 25px;
+                width: 20px;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="home">
+            <div class="navbox">
+                <ul class="nav nav-pills">
+                    <li><a href="../../../index.html">首页</a></li>
+                    <li class="active"><a href="#">知识点</a></li>
+                    <li><a href="../../../test.html">测试</a></li>
+                    <li><a href="../../../software.html">软件</a></li>
+                    <li><a href="../../../about.html">关于我们</a></li>
+                </ul>
+            </div>
+            <a class="tophref" name="top"></a>
+            <img src="../../../img/kownledgetop.png" alt="无法加载" class="top"></img>
+            <div class="topnavbox">
+                <img id="left" src="../../../img/left.png" alt="无法加载" style="cursor: pointer; visibility:visible;">
+                <div class="topnav">
+                    <ul class="nav nav-pills">
+                        <li><a href="../1/1.1.html">基础概念和术语<div></div></a></li>
+                        <li><a href="../2/2.1.html">描述分布<div></div></a></li>
+                        <li><a href="../3/3.1.html">用图形呈现分布<div></div></a></li>
+                        <li><a href="../4/4.1.html">概率与概率分布<div></div></a></li>
+                        <li><a href="../5/5.1.html">样本统计量的<br>概率分布<div></div></a></li>
+                        <li><a href="../6/6.1.html">参数估计<div></div></a></li>
+                        <li class="active"><a href="#">假设检验<div></div></a></li>
+                        <li><a href="../8/8.1.html">方差分析<div></div></a></li>
+                        <li><a href="../9/9.1.html">相关分析<div></div></a></li>
+                        <li><a href="../10/10.1.html">一元线性回归<div></div></a></li>
+                        <li><a href="../11/11.1.html">卡方检验<div></div></a></li>
+                        <li><a href="../12/12.1.html">量表的<br>信效度检验<div></div></a></li>
+                        <li><a href="../13/13.1.html">聚类分析<div></div></a></li>
+                    </ul>
+                </div>
+                <img id="right" src="../../../img/right.png" alt="无法加载" style="cursor: pointer; visibility:hidden;">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div id="leftnav" class="col-md-3 col-xm-3 col-xs-3">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="7.1.html">基本概念和术语<img></a></li>
+                            <li class="active"><a href="7.2.html">一个总体参数的检验<img></a></li>
+                            <li><a href="7.3.html">两个总体参数的检验<img></a></li>
+                          </ul>
+                    </div>
+                    <div id="rightcontent"class="col-md-9 col-xm-9  col-xs-9">
+                        <p class="head">一个总体参数的检验</p>
+                        <p class="headtext">在一个总体参数的检验中，用到的检验统计量重要有三个：\(Z\)统计量、\(t\)统计量和\(χ^2\)统计量。\(Z\)统计量和\(t\)统计量常用于均值和比例的检验，\(χ^2\)统计量则用于方差的检验。</p>
+                        <p class="kind">1.单样本均值的显著性检验</p>
+                        <p>检验单个样本的平均值与特定总体平均值间是否具有显著差异。由于总体分布的形状以及样本容量大小等情况差异，依据中心极限定理，样本均值的抽样分布也存在差异，因而具体的检验统计量也有所不同。</p>
+                        <p class="head2">1.1样本均值的抽样分布为正态分布</p>
+                        <p>无论样本大小如何，只要总体为正态分布且方差已知；无论总体为何分布，只要样本为大样本。</p>
+                        <p>对于\(Z\)检验的决策判断标准：</p>
+                        <p>对于双侧检验，若\(|Z|＜|Z_{a\over 2}|\)，不拒绝原假设；</p>
+                        <p style="text-indent: 9em;">若\(|Z|＞|Z_{a\over 2}|\)，拒绝原假设。</p>
+                        <p>对于单侧检验，若\(|Z|＜|Z_a|\)，不拒绝原假设；</p>
+                        <p style="text-indent: 9em;">若\(|Z|＞|Z_a|\)，拒绝原假设。</p>
+                        <p class="head3">举例:</p>
+                        <hr>
+                        <p class="head2">1.2样本均值的抽样分布为t分布</p>
+                        <p>当总体为正态分布，但总体方差未知，样本为小样本。</p>
+                        <p>对于\(t\)检验的决策判断标准：</p>
+                        <p>对于双侧检验，若\(|t|＜|t_{a\over 2}|\)，不拒绝原假设；</p>
+                        <p style="text-indent: 9em;">若\(|t|＞|t_{a\over 2}|\)，拒绝原假设。</p>
+                        <p>对于单侧检验，若\(|t|＜|t_a|\)，不拒绝原假设；</p>
+                        <p style="text-indent: 9em;">若\(|t|＞|t_a|\)，拒绝原假设。</p>
+                        <p class="head3">举例:</p>
+                        <hr>
+
+                        <p class="kind">2.单样本比例的显著性检验</p>
+                        <p>在大样本情况下统计量\(p\)近似正态分布。\(p\)为样本比例；\(π_0\)为总体比例。检验的统计量为：</p>
+                        <p class="math">\(Z={{p-π_0}\over\sqrt{π_0(1-π_0)\over n}}\)</p>
+                        <p class="head3">举例:</p>
+                        <hr>
+
+                        <p class="kind">3.总体方差的检验</p>
+                        <p>总体服从正态分布时，不论样本量\(n\)的大小，样本方差的抽样分布都为\(χ^2\)布。\(n\)为样本容量，\(s\)是样本方差，\(σ_0\)为总体方差。检验的统计量为：</p>
+                        <p class="math">\(χ^2={(n-1)s^2 \over σ_0^2}\)</p>
+                        <p class="head3">举例:</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom"><img src="../../../img/whitetoyou.png" alt="无法加载"><div>
+            <a href="#top"><div class="totop" style="visibility:hidden;"><img src="../../../img/whitetotop.png" alt="无法加载"  style="visibility:hidden;"></div><a>
+        </div>
+        <!--js-->
+        <script src="../../../js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../../js/know.js"></script>
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>

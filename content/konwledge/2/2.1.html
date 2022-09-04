@@ -1,0 +1,257 @@
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8" >
+        <!--科学公式引入-->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!--载入BootStrap的css-->
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="../../../img/icon.png">
+        <link href="../../../css/navi.css" rel="stylesheet">
+        <!--css-->
+        <style type="text/css">
+            /*总*/
+            html,body{
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                overflow-y: auto; /*主页隐藏*/
+                overflow-x: auto;
+                text-align: center;
+            }
+            @font-face{
+                font-family: "navFont";
+                src: url("../../../fonts/msyhl.ttc");
+                font-family: "navFontActive";
+                src: url("../../../fonts/msyhbd.ttc");
+            }
+            .tophref{
+                position: relative;
+                top: -500px;
+            }
+            .totop{
+                position: fixed;
+                bottom: 45px;
+                right: 100px;
+                background-color: #D6D6D6;
+                height: 40px;
+                width: 40px;
+                padding-top: 10px;
+            }
+            .totop>img{
+                height: 20px;
+                width: 25px;
+            }
+            #leftnav>.nav-pills>li.active>a>img, #leftnav>.nav-pills>li.active>a:focus>img, #leftnav>.nav-pills>li.active>a:hover>img{
+                content: url("../../../img/tomore.png");
+                height: 25px;
+                width: 20px;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="home">
+            <div class="navbox">
+                <ul class="nav nav-pills">
+                    <li><a href="../../../index.html">首页</a></li>
+                    <li class="active"><a href="#">知识点</a></li>
+                    <li><a href="../../../test.html">测试</a></li>
+                    <li><a href="../../../software.html">软件</a></li>
+                    <li><a href="../../../about.html">关于我们</a></li>
+                </ul>
+            </div>
+            <a class="tophref" name="top"></a>
+            <img src="../../../img/kownledgetop.png" alt="无法加载" class="top"></img>
+            <div class="topnavbox">
+                <img id="left" src="../../../img/left.png" alt="无法加载" style="cursor: pointer; visibility:visible;">
+                <div class="topnav">
+                    <ul class="nav nav-pills">
+                        <li><a href="../1/1.1.html">基础概念和术语<div></div></a></li>
+                        <li class="active"><a href="#">描述分布<div></div></a></li>
+                        <li><a href="../3/3.1.html">用图形呈现分布<div></div></a></li>
+                        <li><a href="../4/4.1.html">概率与概率分布<div></div></a></li>
+                        <li><a href="../5/5.1.html">样本统计量的<br>概率分布<div></div></a></li>
+                        <li><a href="../6/6.1.html">参数估计<div></div></a></li>
+                        <li><a href="../7/7.1.html">假设检验<div></div></a></li>
+                        <li><a href="../8/8.1.html">方差分析<div></div></a></li>
+                        <li><a href="../9/9.1.html">相关分析<div></div></a></li>
+                        <li><a href="../10/10.1.html">一元线性回归<div></div></a></li>
+                        <li><a href="../11/11.1.html">卡方检验<div></div></a></li>
+                        <li><a href="../12/12.1.html">量表的<br>信效度检验<div></div></a></li>
+                        <li><a href="../13/13.1.html">聚类分析<div></div></a></li>
+                    </ul>
+                </div>
+                <img id="right" src="../../../img/right.png" alt="无法加载" style="cursor: pointer; visibility:hidden;">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div id="leftnav" class="col-md-3 col-xm-3 col-xs-3">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li class="active"><a href="#">集中趋势的度量<img></a></li>
+                            <li><a href="2.2.html">离散程度的度量<img></a></li>
+                            <li><a href="2.3.html">分布的形状<img></a></li>
+                          </ul>
+                    </div>
+                    <div id="rightcontent"class="col-md-9 col-xm-9  col-xs-9">
+                        <p class="head">集中趋势的度量<p>
+                        <p class="head2">1.众数（mode）-定义</p>
+                        <p>一组数据中出现次数最多的度量值，用 \(M_0\) 表示。</p>
+                        <p>一般情况下，数据量较大的情况下众数才有意义。</p>
+                        <p>特殊情况：可能会出现两个或两个以上的众数，可能会呈现双峰或多峰分布。</p>
+                        <p class="head3">举例:</p>
+                        <p>在关于汕大学生对饭堂的满意程度调差问卷中，350个被提及的饭堂形成了如下的数据分布结果：</p>
+                        <table class="table table-bordered" style="text-align: center;">
+                            <tr>
+                                <td><b>被提及饭堂</b></td>
+                                <td><b>频数</b></td>
+                            </tr>
+                            <tr>
+                                <td>二 饭</td>
+                                <td>45</td>
+                            </tr>
+                            <tr>
+                                <td>三 饭</td>
+                                <td>90</td>
+                            </tr>
+                            <tr>
+                                <td>四 饭</td>
+                                <td>91</td>
+                            </tr>
+                            <tr>
+                                <td>西 苑</td>
+                                <td>124</td>
+                            </tr>
+                        </table>
+                        <p>数据表格中出现的众数为“西苑”，是出现最多的变量值。值得注意的是，计算众数时是将类别本身当作众数而不是将这个类别出现的次数当作众数，在上述案例中，“西苑”这个类别是众数，而不是“西苑”出现的频数120。</p>
+                        <p>如果数据是分类数据，必须使用众数。案例：若要知道新闻学院中是男生多还是女生多，只能使用众数。</p>
+                        <hr>
+
+                        <p class="head2">2.中位数（median）-定义</p>
+                        <p>一组数据排序后处于中间位置上的度量值，用\(M_e\)表示。</p>
+                        <p>得到中位数的步骤：</p>
+                        <p>●  把所有观测值按照从下到大的顺序排列。</p>
+                        <p>●  若观测个数n为奇数，中位数\(M_e\)位于中间，位置为\({n+1}\over2\) ；若观测个数\(n\)为偶数，中位数\(M_e\)为中间两个数的平均值，位置为\({n+1}\over2\) 。</p>
+                        <p class="head3">举例:</p>
+                        <p>以下表格是汕大六个学院的学生完成青年大学习的比例（单位：百分率），要求求出汕大这六个学院完成青年大学习的百分比的中位数。</p>
+                        <table class="table table-bordered" style="text-align: center;">
+                            <tr>
+                                <td><b>学院</b></td>
+                                <td><b>比例（%）</b></td>
+                            </tr>
+                            <tr>
+                                <td>新闻学院</td>
+                                <td>90</td>
+                            </tr>
+                            <tr>
+                                <td>理学院</td>
+                                <td>67</td>
+                            </tr>
+                            <tr>
+                                <td>文学院</td>
+                                <td>95</td>
+                            </tr>
+                            <tr>
+                                <td>工学院</td>
+                                <td>78</td>
+                            </tr>
+                            <tr>
+                                <td>医学院</td>
+                                <td>88</td>
+                            </tr>
+                            <tr>
+                                <td>法学院</td>
+                                <td>86</td>
+                            </tr>
+                        </table>
+                        <p>首先先将上述数据进行排序：67,78,86,88,90,95。一共是6个数，中位数的位置在\({{(n+1)}\over 2} ={{(6+1)}\over 2} = 3.5\)，也就是第3个和第4个数的平均数是这组数据的中位数：\(M_e ={{(86+88)}\over2} = 87\)(%)。</p>
+                        <hr>
+
+                        <p class="head2">3.分位数（quantile）-定义</p>
+                        <p>一组数据排序后处于25%和75%位置上的值。处于25%位置上的数值称为下四分位数\(Q_l\)，处于75%位置上的数值称为上四分位数\(Q_u\)。</p>
+                        <p>确定分位数的方法：</p>
+                        <p class="math">\(Q_l={n\over4}\)，\(Q_u={3n\over4}\)</p>
+                        <p>如果位置在0.25或0.75的位置上，四分位数等于该位置下侧值加上按比例分摊的两侧数值的差值。</p>
+                        <p class="head3">举例:</p>
+                        <p>四分位数示意图</p>
+                        <table class="table table-bordered" style="text-align: center;">
+                            <tr>
+                                <td>25%</td>
+                                <td>25%</td>
+                                <td>25%</td>
+                                <td>25%</td>
+                            </tr>
+                        </table>
+                        <p class="head3">举例:</p>
+                        <p>四分位数计算方法</p>
+                        <p>下列数据反映了汕大学生对几个饭堂的满意率（单位：百分率），要求计算满意率的四分位数。</p>
+                        <table class="table table-bordered" style="text-align: center;">
+                            <tr>
+                                <td><b>饭堂</b></td>
+                                <td><b>满意率（%）</b></td>
+                            </tr>
+                            <tr>
+                                <td>二 饭</td>
+                                <td>86</td>
+                            </tr>
+                            <tr>
+                                <td>三 饭</td>
+                                <td>76</td>
+                            </tr>
+                            <tr>
+                                <td>四 饭</td>
+                                <td>82</td>
+                            </tr>
+                            <tr>
+                                <td>西 苑</td>
+                                <td>58</td>
+                            </tr>
+                            <tr>
+                                <td>过渡校区饭堂</td>
+                                <td>64</td>
+                            </tr>
+                        </table>
+                        <p>首先将这组数列由低到高排序：58,64,76,82,86。</p>
+                        <p>然后计算下四分位数的位置：\(Q_L = {n\over 4} = {5\over 4} = 1.25\)，即下分位数在第一个数值和第二个数值之间的0.25的位置上，因此：\(Q_L = 58 +（64-58）× 0.25 = 59.5\)。</p>
+                        <p>所以满意率的下四分位数为59.5%。</p>
+                        <p>同理，先计算上四分位数的位置：\(Q_u= {3n\over4} = {{3×5}\over 4} = 3.75\)，即上四分位数在第三个和第四个数值之间0.75的位置上，因此\(Q_u = 76 +（82-76）× 0.75 = 80.5\)。</p>
+                        <p>所以满意率的上四分位数为80.5%。</p>
+                        <hr>
+
+                        <p class="head2">4.平均数（average）-定义</p>
+                        <p>也叫均值，是一组数据中所有数值相加后除以数据的个数得到的结果。是一组数据的均衡点所在，体现了数据的必然性特征。</p>
+                        <p>根据总体数据计算的称为总体平均数，记作\(μ\)；根据样本数据计算的称为样本平均数，记作 \(\overline x\)。</p>
+                        <p>计算公式为：</p>
+                        <p class="math">\(\overline x={{\sum x}\over n}\)</p>
+                        <p>\(\sum\)为连加符号，即将其后所有数值相加；\(x\)是数据中每个具体的数值；\(\sum x\)表示将变量\(x\)的所有值相加，也记作\({\sum_{i=1}^n}x\) ；\(n\)是样本规模，如果是总体规模，一般用大写字母\(N\)表示。</p>
+                        <p class="head3">举例:</p>
+                        <p>在四分位数的案例中，要求求出饭堂满意率的平均值。</p>
+                        <p>根据定义的公式，\(\overline X = {{\sum_x}\over n} = {{(58+64+76+82+86)} \over 5} = 73.2\)%，即汕大学生对五个饭堂满意率的平均值为73.2%。</p>
+                        <hr>
+
+                        <p class="kind">5.特征比较及其适用情况</p>
+                        <p class="kind2">5.1测量水平</p>
+                        <p>对于数值型变量，三个集中量数都可以使用，平均数是最常用的量数；对于顺序变量，中位数更为合适，因为中位数是建立在排序基础上的；对于分类变量，只能使用众数。</p>
+                        <p class="kind2">5.2灵敏程度</p>
+                        <p>平均数的灵敏程度要高于众数和中位数。因为在计算平均数时，每个数值都要考虑，而确定中位数和众数时，考虑的是数据出现的位置或者次数，对数值本身的变化反应不够灵敏。</p>
+                        <p class="kind2">5.3稳定程度</p>
+                        <p>由于平均数的计算需要每个数值都加入，因因而它较少受到样本抽样的影响，作为反映样本集中趋势的量数比较稳定可靠。中位数与众数则很容易受到样本变化的影响，稳定性较差。</p>
+                        <p class="kind2">5.4极端数值</p>
+                        <p>由于计算平均数时每个数值都要加入，因此它很容易受到极端数值的影响，进而降低其代表性，即难以反映所研究事物的真实面貌。而中位数与众数则较少受到极端数值影响。</p>
+                        <p class="kind2">5.5数据分布</p>
+                        <p>当数据中出现极其反常的数值时，平均数和中位数的差别就会很大，这时中位数是更具代表性的集中量数。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom"><img src="../../../img/whitetoyou.png" alt="无法加载"><div>
+            <a href="#top"><div class="totop" style="visibility:hidden;"><img src="../../../img/whitetotop.png" alt="无法加载"  style="visibility:hidden;"></div><a>
+        </div>
+        <!--js-->
+        <script src="../../../js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../../js/know.js"></script>
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>

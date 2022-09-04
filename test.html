@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <title>统优-测试</title>
+        <meta charset="UTF-8" >
+        <!--载入BootStrap的css-->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="img/icon.png">
+        <link href="css/navi.css" rel="stylesheet">
+        <!--css-->
+        <style type="text/css">
+            /*总*/
+            html,body{
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                overflow-y: auto; /*主页隐藏*/
+                overflow-x: auto;
+                text-align: center;
+            }
+            @font-face{
+                font-family: "navFont";
+                src: url("fonts/msyhl.ttc");
+                font-family: "navFontActive";
+                src: url("fonts/msyhbd.ttc");
+            }
+            .top{
+                position: relative;
+                top: 70px;
+                width: 100%;
+            }
+            .container{
+                color: #2A82E4;
+                font-size: 30px;
+                font-family: "navFont";
+                position: relative;
+                top: 100px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="home">
+            <div class="navbox">
+                <ul class="nav nav-pills">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="konwledge.html">知识点</a></li>
+                    <li class="active"><a href="#">测试</a></li>
+                    <li><a href="software.html">软件</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                </ul>
+            </div>
+            <img src="img/testtop.png" alt="无法加载" class="top"></img>
+            <div class="topnavbox">
+                <img id="left" src="img/left.png" alt="无法加载" style="cursor: pointer; visibility:visible;">
+                <div class="topnav">
+                    <ul class="nav nav-pills">
+                        <li><a href="content/test/1/1.1.html">基础概念和术语<div></div></a></li>
+                        <li><a href="content/test/2/2.1.html">描述分布<div></div></a></li>
+                        <li><a href="content/test/3/3.1.html">用图形呈现分布<div></div></a></li>
+                        <li><a href="content/test/4/4.1.html">概率与概率分布<div></div></a></li>
+                        <li><a href="content/test/5/5.1.html">样本统计量的<br>概率分布<div></div></a></li>
+                        <li><a href="content/test/6/6.1.html">参数估计<div></div></a></li>
+                        <li><a href="content/test/7/7.1.html">假设检验<div></div></a></li>
+                        <li><a href="content/test/8/8.1.html">方差分析<div></div></a></li>
+                        <li><a href="content/test/9/9.1.html">相关分析<div></div></a></li>
+                        <li><a href="content/test/10/10.1.html">一元线性回归<div></div></a></li>
+                        <li><a href="content/test/11/11.1.html">卡方检验<div></div></a></li>
+                        <li><a href="content/test/12/12.1.html">量表的<br>信效度检验<div></div></a></li>
+                        <li><a href="content/test/13/13.1.html">聚类分析<div></div></a></li>
+                    </ul>
+                </div>
+                <img id="right" src="img/right.png" alt="无法加载" style="cursor: pointer; visibility:hidden;">
+            </div>
+            <div class="container">
+                <p>在这一部分，你可以进行单轮单题的小测试</p><br>
+                <p>测试提交后错误答案将显示红色，正确答案将显示绿色</p><br>
+                <p>错误的题目将附有解释说明，你可以借此巩固知识点</p><br>
+                <p>现在开始测试吧！</p>
+            </div>
+            <div class="bottom"><img src="img/whitetoyou.png" alt="无法加载"><div>
+        </div>
+        <!--js-->
+        <script src="js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+        //绑定事件
+            var lt = $("#left");
+            var rt = $("#right");
+            var navmove = $(".topnav > .nav")
+            var i = 0;
+            lt.mouseover(function(){
+                lt.attr("src","img/leftblue.png");
+            }).mouseout(function(){
+                lt.attr("src","img/left.png");
+            }).click(function(){
+                if(parseInt(navmove.css("right")) < 1020){
+                    rt.attr("style","visibility:visable;");
+                    i += 170;
+                    navmove.attr("style","right:" + i + "px;");
+                }
+                else{
+                    lt.attr("style","visibility:hidden;");
+                }
+            })
+
+            rt.mouseover(function(){
+                rt.attr("src","img/rightblue.png");
+            }).mouseout(function(){
+                rt.attr("src","img/right.png");
+            }).click(function(){
+                if(parseInt(navmove.css("right")) > 0){
+                    lt.attr("style","visibility:visable;");
+                    i -= 170;
+                    navmove.attr("style","right:" + i + "px;");
+                }
+                else{
+                    rt.attr("style","visibility:hidden;");
+                }
+            })
+            //滚动到某一高度固定
+            var totop =  $(".totop");
+            var totopimg = $(".totop > img")
+            var sTop = 0;
+            $("body").scroll(function(){
+                sTop = $(this).scrollTop();//当前滚动高度
+                if(sTop >= 200){//当滚动高度要大于固定div高度时
+                    $(".topnavbox").css({"position":"fixed","top":"70","left":"calc(50% - 641px)"});
+                }else{
+                    $(".topnavbox").css({"position":"relative","left":"0"});
+                }
+            });
+        </script>
+    </body>
+</html>

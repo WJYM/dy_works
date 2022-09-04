@@ -1,0 +1,166 @@
+<html>
+    <head>
+        <title>统优-软件-Excel</title>
+        <meta charset="UTF-8" >
+        <!--载入BootStrap的css-->
+        <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="../../img/icon.png">
+        <link href="../../css/navi.css" rel="stylesheet">
+        <!--css-->
+        <style type="text/css">
+            /*总*/
+            html,body{
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                overflow-y: auto; /*主页隐藏*/
+                overflow-x: auto;
+                text-align: center;
+            }
+            @font-face{
+                font-family: "navFont";
+                src: url("../../fonts/msyhl.ttc");
+                font-family: "navFontActive";
+                src: url("../../fonts/msyhbd.ttc");
+            }
+            .top{
+                position: relative;
+                top: 70px;
+                width: 100%;
+            }
+            .container{
+                line-height: 40px;
+                color: #2A82E4;
+                font-size: 30px;
+                font-family: "navFont";
+                position: relative;
+                top: 70px;
+            }
+            .box_div{
+                text-align: left;
+            }
+            .box{
+                display: inline-block;
+                height: 150px;
+                width: 150px;
+                background-image: url("../../img/software/Excel.png");
+                background-size: cover;
+                border-radius: 20px;
+            }
+            .name{
+                display: inline-block;
+                font-family: "navFontActive";
+                font-size: 50px;
+                color: black;
+                text-align: left;
+                margin-bottom: 20px;
+            }
+            .row{
+                display: flex;
+                justify-content: center;
+                border: 2px solid #2A82E4;
+                padding: 40px;
+            }
+            .introduce{
+                font-family: "navFontActive";
+                color: #2A82E4;
+                text-align: left;
+                margin-bottom: 40px;
+            }
+            .text{
+                color: black;
+                text-align: left;
+                font-size: 20px;
+                text-indent: 2em;
+                margin-bottom: 40px;
+            }
+            .introduce>a{
+                color: #2A82E4;
+                text-decoration: underline;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="home">
+            <div class="navbox">
+                <ul class="nav nav-pills">
+                    <li><a href="../../index.html">首页</a></li>
+                    <li><a href="../../konwledge.html">知识点</a></li>
+                    <li><a href="../../test.html">测试</a></li>
+                    <li class="active"><a href="../../software.html">软件</a></li>
+                    <li><a href="../../about.html">关于我们</a></li>
+                </ul>
+            </div>
+            <img src="../../img/sorewaretop.png" alt="无法加载" class="top"></img>
+            <div class="container">
+                <div class="box_div">
+                    <div class="box"></div>
+                    <p class="name">Excel</p>
+                </div>
+                <div class="row">
+                    <div >
+                        <p class="introduce">软件简介</p>
+                        <p class="text">它严格说来并不是统计软件，但作为数据表格软件，必然有一定统计计算功能。而且凡是有Microsoft Office的计算机，基本上都装有Excel。但要注意，有时在装 Office时没有装数据分析的功能，那就必须装了才行。当然，画图功能是都具备的。对于简单分析，Excel还算方便，但随着问题的深入，Excel就不那么“傻瓜”，需要使用函数，甚至根本没有相应的方法了。多数专门一些的统计推断问题还需要其他专门的统计软件来处理。</p>
+                        <p class="introduce">官方网址：<a href="https://www.microsoft.com/zh-cn/microsoft-365/excel/">https://www.microsoft.com/zh-cn/microsoft-365/excel/<a></p>
+                        <p class="introduce" ><a href="../../zip/excel.zip" download="excel">点击下载</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom"><img src="../../img/whitetoyou.png" alt="无法加载"><div>
+        </div>
+        <!--js-->
+        <script src="../../js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+        //绑定事件
+            var lt = $("#left");
+            var rt = $("#right");
+            var navmove = $(".topnav > .nav")
+            var i = 0;
+            lt.mouseover(function(){
+                lt.attr("src","img/leftblue.png");
+            }).mouseout(function(){
+                lt.attr("src","img/left.png");
+            }).click(function(){
+                if(parseInt(navmove.css("right")) < 1020){
+                    rt.attr("style","visibility:visable;");
+                    i += 170;
+                    navmove.attr("style","right:" + i + "px;");
+                }
+                else{
+                    lt.attr("style","visibility:hidden;");
+                }
+            })
+
+            rt.mouseover(function(){
+                rt.attr("src","img/rightblue.png");
+            }).mouseout(function(){
+                rt.attr("src","img/right.png");
+            }).click(function(){2
+                if(parseInt(navmove.css("right")) > 0){
+                    lt.attr("style","visibility:visable;");
+                    i -= 170;
+                    navmove.attr("style","right:" + i + "px;");
+                }
+                else{
+                    rt.attr("style","visibility:hidden;");
+                }
+            })
+        //滚动到某一高度固定
+            var sTop = 0;
+            $("body").scroll(function(){
+                sTop = $(this).scrollTop();//当前滚动高度
+                if(sTop >= 200){//当滚动高度要大于固定div高度时
+                    $(".topnavbox").css({"position":"fixed","top":"70","left":"calc(50% - 641px)"});
+                    totop.attr("style","visibility:visable;");
+                    totopimg.attr("style","visibility:visable;");
+                }else{
+                    $(".topnavbox").css({"position":"relative","left":"0"});
+                    totop.attr("style","visibility:hidden;");
+                    totopimg.attr("style","visibility:hidden;");
+                }
+            });
+        </script>
+    </body>
+</html>

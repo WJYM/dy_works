@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8" >
+        <!--科学公式引入-->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!--载入BootStrap的css-->
+        <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="../../../img/icon.png">
+        <link href="../../../css/navi.css" rel="stylesheet">
+        <!--css-->
+        <style type="text/css">
+            /*总*/
+            html,body{
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                overflow-y: auto; /*主页隐藏*/
+                overflow-x: auto;
+                text-align: center;
+            }
+            @font-face{
+                font-family: "navFont";
+                src: url("../../../fonts/msyhl.ttc");
+                font-family: "navFontActive";
+                src: url("../../../fonts/msyhbd.ttc");
+            }
+            .tophref{
+                position: relative;
+                top: -500px;
+            }
+            .totop{
+                position: fixed;
+                bottom: 45px;
+                right: 100px;
+                background-color: #D6D6D6;
+                height: 40px;
+                width: 40px;
+                padding-top: 10px;
+            }
+            .totop>img{
+                height: 20px;
+                width: 25px;
+            }
+            #leftnav>.nav-pills>li.active>a>img, #leftnav>.nav-pills>li.active>a:focus>img, #leftnav>.nav-pills>li.active>a:hover>img{
+                content: url("../../../img/tomore.png");
+                height: 25px;
+                width: 20px;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="home">
+            <div class="navbox">
+                <ul class="nav nav-pills">
+                    <li><a href="../../../index.html">首页</a></li>
+                    <li class="active"><a href="#">知识点</a></li>
+                    <li><a href="../../../test.html">测试</a></li>
+                    <li><a href="../../../software.html">软件</a></li>
+                    <li><a href="../../../about.html">关于我们</a></li>
+                </ul>
+            </div>
+            <a class="tophref" name="top"></a>
+            <img src="../../../img/kownledgetop.png" alt="无法加载" class="top"></img>
+            <div class="topnavbox">
+                <img id="left" src="../../../img/left.png" alt="无法加载" style="cursor: pointer; visibility:visible;">
+                <div class="topnav">
+                    <ul class="nav nav-pills">
+                        <li><a href="../1/1.1.html">基础概念和术语<div></div></a></li>
+                        <li><a href="../2/2.1.html">描述分布<div></div></a></li>
+                        <li><a href="../3/3.1.html">用图形呈现分布<div></div></a></li>
+                        <li class="active"><a href="#">概率与概率分布<div></div></a></li>
+                        <li><a href="../5/5.1.html">样本统计量的<br>概率分布<div></div></a></li>
+                        <li><a href="../6/6.1.html">参数估计<div></div></a></li>
+                        <li><a href="../7/7.1.html">假设检验<div></div></a></li>
+                        <li><a href="../8/8.1.html">方差分析<div></div></a></li>
+                        <li><a href="../9/9.1.html">相关分析<div></div></a></li>
+                        <li><a href="../10/10.1.html">一元线性回归<div></div></a></li>
+                        <li><a href="../11/11.1.html">卡方检验<div></div></a></li>
+                        <li><a href="../12/12.1.html">量表的<br>信效度检验<div></div></a></li>
+                        <li><a href="../13/13.1.html">聚类分析<div></div></a></li>
+                    </ul>
+                </div>
+                <img id="right" src="../../../img/right.png" alt="无法加载" style="cursor: pointer; visibility:hidden;">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div id="leftnav" class="col-md-3 col-xm-3 col-xs-3">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="4.1.html">度量事件发生的可能性<img></a></li>
+                            <li><a href="4.2.html">离散型变量的概率分布<img></a></li>
+                            <li><a href="4.3.html">连续型变量的概率分布<img></a></li>
+                            <li class="active"><a href="#" style="font-size: 16px;">由正态分布导出的重要分布<img></a></li>
+                          </ul>
+                    </div>
+                    <div id="rightcontent"class="col-md-9 col-xm-9  col-xs-9">
+                        <p class="head">重要分布</p>
+                        <p class="head2">1.\(χ^2\)分布（chi-square distribution）-定义</p>
+                        <p>卡方分布是一种偏正态分布，自由度不同，分布曲线的偏斜程度也不同。卡方分布的统计量用 表示。</p>
+                        <p>卡方分布的定义：设随机变量\(X_1\)，\(X_2\)，...，\(X_n\) 相互独立，且\(X_i（i=1,2,...,n）\)服从正态分布\(N(0,1)\)，则他们的平方和\(\sum^n_{i=1}x^2_i\)服从自由度为\(n\)的\(χ^2\)分布，记为\(χ\)~\(χ^2(n)\)。</p>
+                        <p>卡方分布曲线下的总面积为1，随着自由度的增加， 分布的概率密度曲线趋于对称。当\(n\)趋于正无穷时， 分布的极限分布是正态分布。</p>
+                        <p>卡方分布有如下特点：</p>
+                        <p>●  分布的变量值始终为正。</p>
+                        <p>●  分布的形状取决于其自由度\(n\)的大小，通常为不对称的右偏分布，但随着自由度的增大逐渐趋于对称。</p>
+                        <p>●  期望值为：\(E(χ^2)= n\)，方差为：\(D(χ^2)= 2n\)（\(n\)为自由度）。</p>
+                        <p>●  可加性：若\(U\)和\(V\)为两个独立的\(χ^2\)分布随机变量，\(U\)~\(χ^2\)（\(n_1\)），\(V\)~\(χ^2\)（\(n_2\)），则\(U+V\)这一随机变量服从自由度为\(n_1 + n_2\) 的\(χ^2\)分布。</p>
+                        <p>\(χ^2\)分布用于统计分析中的计算数据的假设检验以及样本方差与总体方差之间是否有显著差异的检验。</p>
+                        <p class="head3">举例:</p>
+                        <hr>
+
+                        <p class="head2">2.\(t\)分布（t-distribution）-定义</p>
+                        <p>当样本较小\(（n＜30）\)时，正态分布就不能准确地描述变量的分布，这时常用到\(t\)分布。</p>
+                        <p>\(t\)分布定义：\(t = {{X- μ}\over{S/\sqrt n}}\) ，这样的分布称为\(t\)分布，记为\(t(n)\)，其中\(n\)为自由度。</p>
+                        <p>\(t\)分布是对两个样本的均值差异进行显著性检验的基础，对于小样本（\(n\)≤30以下）的情况尤为适用。\(t\)分布是类似正态分布的一种对称分布，但\(t\)分布的方差要大于正态分布的方差，与正态分布相比，\(t\)分布的中间要低平一些。样本越小，分布的方差越大，其中间就越低，两尾端翘得越高。随着样本量的增加，\(t\)分布的方差逐渐变小，当样本容量大到一定程度时，\(t\)分布的方差逐渐趋于1，这时\(t\)分布与正态分布就没有什么区别了。因此，\(t\)分布依赖于自由度的大小，随着自由度的增大，\(t\)分布也逐渐趋于正态分布。</p>
+                        <p class="head3">举例:</p>
+                        <hr>
+
+                        <p class="head2">3.\(F\)分布（F-distribution）-定义</p>
+                        <p>\(F\)分布定义：若\(U\)为服从自由度为\(n_1\)的\(χ^2\)分布，即\(U\)~\(χ^2(n1)\)，\(V\)为服从自由度为\(n_2\)的\(χ^2\)分布，即\(V\)~\(χ^2(n_2)\)，且\(U\)和\(V\)相互独立，则\(F = {{U/n_1}\over{V/n_2}}\)，称为服从自由度\(n_1\)和\(n_2\)的分布，记作\(F\)~\(F(n_1,n_2)\)。</p>
+                        <p>分布是一种非对称分布，它有两个自由度，且位置不可互换。</p>
+                        <p>分布与\(t\)分布还存在以下关系：如果随机变量\(x\)服从\(t(n)\)分布，则\(x^2\)服从\(（1，n）\)的分布。这个性质将用于回归分析的回归系数显著性检验。
+                            </p>
+                        <p class="head3">举例:</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom"><img src="../../../img/whitetoyou.png" alt="无法加载"><div>
+            <a href="#top"><div class="totop" style="visibility:hidden;"><img src="../../../img/whitetotop.png" alt="无法加载"  style="visibility:hidden;"></div><a>
+        </div>
+        <!--js-->
+        <script src="../../../js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../../js/know.js"></script>
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>

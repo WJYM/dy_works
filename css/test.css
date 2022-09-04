@@ -1,0 +1,119 @@
+/*问题*/
+.row{
+    display: flex;
+    justify-content: center;
+}
+#testcontent{
+    border: 3px solid #2A82E4;
+    position: relative;
+    right: -5px;
+    background: white;
+}
+#testcontent>p.quest{
+    margin: 50px 80px 20px 80px;
+    text-align: left;
+    color: #000;
+    font-size: 20px;
+    font-family: "navFontActive";
+}
+#testcontent>p.quest2{
+    margin: 0px 80px 50px 80px;
+    text-align: left;
+    color: #2A82E4;
+    font-size: 20px;
+    font-family: "navFontActive";
+}
+#testcontent>.radio{
+    margin: 0px 80px 10px 80px;
+    text-align: left;
+    color: #000;
+    font-size: 20px;
+    font-family: "navFont";
+}
+#testcontent>.radio>label>input{
+    position:static;
+    margin: 0 40px 0 0;
+    transform: scale(2);
+    background-color: #2A82E4;
+}
+#testcontent>.btn_div{
+    text-align: left;
+}
+/*提交按钮*/
+#testcontent>.btn_div>.give{
+    margin: 40px 0 40px 80px;
+    padding: 6px 30px;
+    border: 2px solid #2A82E4;
+    border-radius: 200px;
+    font-family: "navFontActive";
+    font-size: 20px;
+    color: #2A82E4;
+    outline: 0;
+}
+#testcontent>.btn_div>.give:hover{
+    color: #000;
+}
+/*下一题按钮*/
+#testcontent>.btn_div>a{
+    text-decoration: none;
+}
+#testcontent>.btn_div>a>.next{
+    margin: 40px 0 40px 80px;
+    padding: 6px 30px;
+    border: 2px solid #2A82E4;
+    border-radius: 200px;
+    font-family: "navFontActive";
+    font-size: 20px;
+    color: #2A82E4;
+    outline: 0;
+    display: none;
+}
+#testcontent>.btn_div>a>.next:hover{
+    color: #000;
+}
+/*上一题按钮*/
+#testcontent>.btn_div>a>.back{
+    margin: 40px 0 40px 80px;
+    padding: 6px 30px;
+    border: 2px solid red;
+    border-radius: 200px;
+    font-family: "navFontActive";
+    font-size: 20px;
+    color: red;
+    outline: 0;
+    display: none;
+}
+#testcontent>.btn_div>a>.back:hover{
+    color: #000;
+}
+
+/*解析*/
+.teachbox{
+    display: none;
+}
+.teachhead{
+    margin: 40px 80px 40px 80px;
+    font-family: "navFontActive";
+    font-size: 40px;
+    color: #2A82E4;
+    text-align: left;
+}
+.teachknow{
+    margin: 20px 80px 20px 80px;
+    font-family: "navFontActive";
+    font-size: 20px;
+    color: #2A82E4;
+    text-align: left;
+}
+.teachknow>a{
+    color: #2A82E4;
+    text-decoration:underline;
+}
+.teachtext{
+    color: #000;
+    margin: 0px 80px 50px 80px;
+    font-family: "navFontActive";
+    font-size: 20px;
+    text-align: left;
+    text-indent: 2em;
+}
